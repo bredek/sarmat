@@ -1,0 +1,21 @@
+{
+  "name": "project name",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "eugene.bredyuk <eugene.bredyuk@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "js/vendor/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1"
+  }
+}
