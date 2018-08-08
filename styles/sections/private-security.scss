@@ -1,0 +1,46 @@
+section.private-security {
+  .left-side,
+  .right-side {
+    padding-top: 290px;
+    padding-bottom: 50px;
+  }
+  .slider-holder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #js-slider {
+    width: 80%;
+    margin: 0 auto;
+    .slick-arrow {
+      width: 0;
+      height: 0;
+      position: absolute;
+      bottom: -10px;
+      z-index: 2;
+      display: none;
+      background: transparent;
+      color: transparent;
+      cursor: pointer;
+      &:after {
+        content: "";
+        display: block;
+        border-style: solid;
+      }
+      &.slick-next {
+        right: 45%;
+        &:after {
+            border-color: transparent transparent transparent #007bff;
+            border-width: 5px 0 5px 10px;
+          }
+      }
+      &.slick-prev {
+        left: 45%;
+        &:after {
+            border-color:  transparent #007bff transparent transparent;
+            border-width: 5px 10px 5px 0;
+          }
+      }
+    }
+  }
+}

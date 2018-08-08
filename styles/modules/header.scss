@@ -1,4 +1,5 @@
 header {
+  position: relative;
   height: 100vh;
   background-image: linear-gradient(
       -180deg,
@@ -64,7 +65,7 @@ header {
     }
   }
   .content-holder {
-    margin-left: 60px;
+    margin-left: 7%;
   }
   h1 {
     color: #ffffff;
@@ -79,6 +80,14 @@ header {
     width: 125px;
   }
   .sub-menu {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 65px;
+    width: 77.5%;
+    height: 225px; // animation: blur 0s forwards;
+    background: rgba(0,0,0,.5);
     ul {
       width: 100%;
       li {

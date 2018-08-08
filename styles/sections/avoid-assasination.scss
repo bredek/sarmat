@@ -1,0 +1,30 @@
+section.avoid-assasination {
+  .left-side {
+    .content-holder {
+      margin-top: 85px;
+    }
+  }
+  p {
+    max-width: 315px;
+    margin-top: 20px;
+    font-size: 13px;
+    line-height: 15px;
+    color: #ffffff;
+    letter-spacing: 0;
+  }
+  .right-side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .image-holder {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 55px;
+      width: 80%;
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+}

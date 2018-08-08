@@ -345,16 +345,25 @@
       var btn = $("#js-menu-toggle"),
         menu = $("#js-sub-menu");
 
-      btn.on("click", function() {
+      btn.on("click", function(e) {
+        e.preventDefault();
+
         btn.toggleClass("opened");
         menu.fadeToggle(function() {
           menu.toggleClass("opened");
         });
       });
     },
+    // },
+
+    initSlider: function() {
+      $("#js-slider").slick({});
+      
+    },
 
     initAllPlugins: function() {
       this.initShowSubMenu();
+      this.initSlider();
     }
   };
 

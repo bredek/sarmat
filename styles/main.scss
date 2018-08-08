@@ -1,9 +1,13 @@
 // vendors
 @import 'modules/reset.scss';
+@import 'modules/vendor.scss';
 
 // other modules that u need
 @import 'modules/fonts.scss';
 @import 'modules/common.scss';
 @import 'modules/header.scss';
+// sections
+@import 'sections/avoid-assasination.scss';
+@import 'sections/private-security.scss';
 
 
