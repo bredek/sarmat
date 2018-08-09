@@ -1,10 +1,12 @@
 section.private-security {
-  .left-side,
-  .right-side {
-    padding-top: 290px;
-    padding-bottom: 50px;
+  .left-side {
+    padding-top: 85px;
   }
-  .slider-holder {
+  .right-side {
+    padding-top: 0;
+  }
+  .slider-holder { 
+    height: 640px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,7 +18,7 @@ section.private-security {
       width: 0;
       height: 0;
       position: absolute;
-      bottom: -10px;
+      bottom: -2px;
       z-index: 2;
       display: none;
       background: transparent;
