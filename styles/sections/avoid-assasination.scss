@@ -1,5 +1,5 @@
 section.avoid-assasination {
-  .left-side {
+  .col:first-child{
     .content-holder {
       margin-top: 85px;
     }
@@ -16,7 +16,7 @@ section.avoid-assasination {
     color: #ffffff;
     letter-spacing: 0;
   }
-  .right-side {
+  .col:last-child{
     display: flex;
     justify-content: center;
     align-items: center;

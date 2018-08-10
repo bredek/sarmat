@@ -1,6 +1,5 @@
 @import "modules/vars.scss";
 @import "modules/mixins.scss";
-
 body {
   font-family: "Roboto", Arial, sans-serif;
   font-size: 12px;
@@ -8,8 +7,8 @@ body {
   letter-spacing: 1.5px;
 }
 
-section{
-  .inner-sub-menu{
+section {
+  .inner-sub-menu {
     width: 77.5%;
     display: flex;
     justify-content: space-between;
@@ -17,22 +16,23 @@ section{
     position: absolute;
     bottom: 0;
     left: 17.5%;
-    li{
+    li {
       width: 20%;
       height: 165px;
       padding: 30px;
-      box-sizing:content-box;
+      box-sizing: content-box;
       background: $dark-grey;
-      &.active{
+      &.active {
         background: black;
       }
-      h4{
+      h4 {
         margin-top: 28px;
       }
-      p{
+      p {
         margin-top: 18px;
         font-size: 9px;
-        color: #FFFFFF;
+        line-height: 10px;
+        color: #ffffff;
         letter-spacing: 0;
       }
     }
@@ -48,8 +48,7 @@ section{
     height: 100%;
     display: flex;
     justify-content: space-between;
-    .left-side,
-    .right-side {
+    .col {
       width: 50%;
       p {
         max-width: 315px;
@@ -62,18 +61,20 @@ section{
       button {
         margin-top: 20px;
       }
-    }
-    .left-side {
-      background-color: $main-grey;
-      .content-holder {
-        margin-left: 35%;
-      }
-    }
-    .right-side {
-      background-color: $light-grey;
-    }
-  }
 
+      &:first-child{
+        background-color: $main-grey;
+        .content-holder {
+          margin-left: 35%;
+        }
+      }
+      &:last-child {
+        background-color: $light-grey;
+      }
+
+    }
+
+  }
 }
 
 h1 {
@@ -85,14 +86,22 @@ h1 {
   text-transform: uppercase;
 }
 
+h2 {
+  font-family: "HeadingCompressedPro", Arial, sans-serif;
+  font-size: 40px;
+  color: #ffffff;
+  line-height: 49px;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
 h4 {
   font-size: 12px;
   font-weight: 500;
-  color: #FFFFFF;
+  color: #ffffff;
   line-height: 14px;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-
 }
 
 a {

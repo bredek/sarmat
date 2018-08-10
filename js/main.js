@@ -354,7 +354,29 @@
         });
       });
     },
-    // },
+
+    initShowOrderForm: function() {
+      var showBtn = $("#js-show-form"),
+        formHolder = $("#js-form-holder"),
+        contentHolder = $("#js-content-holder"),
+        thanksHolder = $("#js-thanks-holder"),
+        closeBtn = $("#js-close-form");
+        submitBtn = $("#js-form-submit");
+
+      showBtn.on("click", function(e) {
+        formHolder.show();
+        contentHolder.hide();
+      });
+      submitBtn.on('click', function (e) {
+        thanksHolder.show();
+        formHolder.hide();
+      });
+      closeBtn.on("click", function(e) {
+        formHolder.hide();
+        thanksHolder.hide();
+        contentHolder.show();
+      });
+    },
 
     initSlider: function() {
       $("#js-slider").slick({});
@@ -362,6 +384,7 @@
 
     initAllPlugins: function() {
       this.initShowSubMenu();
+      this.initShowOrderForm();
       this.initSlider();
     }
   };
@@ -382,25 +405,31 @@ $(document).ready(function() {
     // // sectionContainer: "section",     // sectionContainer accepts any kind of selector in case you don't want to use section
     // easing: "ease",                  // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in",
     //                                  // "ease-out", "ease-in-out", or even cubic bezier value such as "cubic-bezier(0.175, 0.885, 0.420, 1.310)"
-    animationTime: 1000,             // AnimationTime let you define how long each section takes to animate
+    animationTime: 1000, // AnimationTime let you define how long each section takes to animate
     // pagination: true,                // You can either show or hide the pagination. Toggle true for show, false for hide.
     // updateURL: false,                // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
     // beforeMove: function(index) {},  // This option accepts a callback function. The function will be called before the page moves.
     afterMove: function(index) {
-      console.log(index)
-      if(index === 2){
-        $('.avoid-assasination .left-side h1').addClass('animated fadeInLeft');
-        $('.avoid-assasination .left-side p').addClass('animated fadeInLeft');
-        $('.avoid-assasination .right-side .image-holder').addClass('animated fadeInRight');
+      console.log(index);
+      if (index === 2) {
+        $(".avoid-assasination .col:first-child h1").addClass(
+          "animated fadeInLeft"
+        );
+        $(".avoid-assasination .col:first-child p").addClass(
+          "animated fadeInLeft"
+        );
+        $(".avoid-assasination .col:last-child .image-holder").addClass(
+          "animated fadeInRight"
+        );
       }
-    },   // This option accepts a callback function. The function will be called after the page moves.
-    loop: false,                     // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
+    }, // This option accepts a callback function. The function will be called after the page moves.
+    loop: false // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
     // keyboard: true,                  // You can activate the keyboard controls
     // responsiveFallback: false,        // You can fallback to normal page scroll by defining the width of the browser in which
     //                                  // you want the responsive fallback to be triggered. For example, set this to 600 and whenever
     //                                  // the browser's width is less than 600, the fallback will kick in.
-    // direction: "vertical"            // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".  
- });
+    // direction: "vertical"            // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".
+  });
 
   // document.addEventListener("DOMContentLoaded", plg.preloader(), false);
   // plg.initPins();

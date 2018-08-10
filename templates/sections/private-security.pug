@@ -1,22 +1,42 @@
 section.private-security
     .container.section-container
-        .left-side
-            .content-holder
+        .col
+            .content-holder#js-content-holder
                 h1 охрана<br/>физических<br/>лиц
                 p Комплексная охрана физических лиц, семьи, жилья, офиса и загородного дома. Комплексная охрана работает круглосуточно, ночью, днём, на несколько часов.
-                button Заказать услугу
-        .right-side
+                button#js-show-form Заказать услугу
+            .content-holder.form-holder#js-form-holder
+                .form-content
+                    form
+                        input(type="text" placeholder="имя")
+                        input(type="text" placeholder="email")
+                        input(type="text" placeholder="номер телефона")
+                    button(type="submit")#js-form-submit Заказать услугу
+                    img.cross(src="img/icons/cross.svg", alt="cross")
+            .content-holder.form-holder#js-thanks-holder
+                .thanks-content
+                    h2 Спасибо
+                    h4 менеджер сармат свяжется с вами после обработки запроса
+                    img.cross#js-close-form(src="img/icons/cross.svg", alt="cross")
+
+        .col
             .slider-holder
-                #js-slider
-                    .slide
-                        img(src="img/pictures/avoid-assasination.jpg", alt="avoid-assasination")
-                    .slide.content-slide
-                        .left-side
-                            p Тайно и открыто контролируем условия безопасности;
-                    .slide
-                        img(src="img/pictures/avoid-assasination.jpg", alt="avoid-assasination")
-                    .slide
-                        img(src="img/pictures/avoid-assasination.jpg", alt="avoid-assasination")
+                //- #js-slider
+                //-     .slide
+                //-         img(src="img/pictures/avoid-assasination.jpg", alt="avoid-assasination")
+                //-     .slide.content-slide
+                //-         .left-side
+                //-             p Тайно и открыто контролируем условия безопасности;
+                //-             p Проверяем жильё и часто посещаемые места;
+                //-             p При необходимости устанавливаем системы слежения;
+                //-             p Взаимодействуем с правоохранительными органами;
+                //-             p В непредвиденной опасности телохранители и группа охраны блокируют доступ к охраняемым лицам и помещениям.
+                //-         .right-side
+                //-             h2 как мы<br/>охраняем
+                //-     .slide
+                //-         img(src="img/pictures/avoid-assasination.jpg", alt="avoid-assasination")
+                //-     .slide
+                //-         img(src="img/pictures/avoid-assasination.jpg", alt="avoid-assasination")
     ul.inner-sub-menu
         li.active
             img(src="img/icons/security.svg")
