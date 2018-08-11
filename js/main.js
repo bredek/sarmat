@@ -382,6 +382,7 @@
       $("#js-security-slider").slick({});
       $("#js-security-inner-slider").slick({});
       $("#js-transporting-slider").slick({});
+      $("#js-vip-estate-slider").slick({});
     },
 
     initAllPlugins: function() {
