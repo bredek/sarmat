@@ -379,8 +379,9 @@
     },
 
     initSlider: function() {
-      $("#js-slider").slick({});
-      $("#js-inner-slider").slick({});
+      $("#js-security-slider").slick({});
+      $("#js-security-inner-slider").slick({});
+      $("#js-transporting-slider").slick({});
     },
 
     initAllPlugins: function() {
