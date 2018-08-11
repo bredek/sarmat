@@ -380,6 +380,7 @@
 
     initSlider: function() {
       $("#js-slider").slick({});
+      $("#js-inner-slider").slick({});
     },
 
     initAllPlugins: function() {
