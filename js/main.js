@@ -383,6 +383,8 @@
       $("#js-security-inner-slider").slick({});
       $("#js-transporting-slider").slick({});
       $("#js-vip-estate-slider").slick({});
+      $("#js-vip-buildings-slider").slick({});
+      $("#js-sybcer-security-slider").slick({});
     },
 
     initAllPlugins: function() {
