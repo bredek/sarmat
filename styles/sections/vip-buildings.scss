@@ -1,0 +1,10 @@
+section.vip-buildings{
+  .col:last-child {
+    p{
+      margin-top: 18px !important;
+      &:first-child{
+        margin-top: 0 !important; 
+      }
+    }
+  }
+}

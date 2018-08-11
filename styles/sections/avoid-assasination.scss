@@ -1,22 +1,22 @@
 section.avoid-assasination {
-  .col:first-child {
+  .col:first-child{
     .content-holder {
       margin-top: 85px;
     }
-    h1 {
-      opacity: 0;
-    }
-    p {
-      opacity: 0;
-      max-width: 315px;
-      margin-top: 20px;
-      font-size: 13px;
-      line-height: 15px;
-      color: #ffffff;
-      letter-spacing: 0;
-    }
   }
-  .col:last-child {
+  h1{
+    opacity: 0;
+  }
+  p {
+    opacity: 0;
+    max-width: 315px;
+    margin-top: 20px;
+    font-size: 13px;
+    line-height: 15px;
+    color: #ffffff;
+    letter-spacing: 0;
+  }
+  .col:last-child{
     display: flex;
     justify-content: center;
     align-items: center;
