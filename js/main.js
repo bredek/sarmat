@@ -378,6 +378,29 @@
       });
     },
 
+    initShowContactForm: function() {
+      var showBtn = $("#js-show-contact-form"),
+        formHolder = $("#js-contact-form-holder"),
+        tip = $(".js-contact-form-tip "),
+        thanksHolder = $("#js-thanks-contact-holder"),
+        closeBtn = $("#js-close-contact-form");
+        submitBtn = $("#js-contact-form-submit");
+
+      showBtn.on("click", function(e) {
+        formHolder.show();
+        tip.hide();
+      });
+      submitBtn.on('click', function (e) {
+        thanksHolder.show();
+        formHolder.hide();
+      });
+      closeBtn.on("click", function(e) {
+        formHolder.hide();
+        thanksHolder.hide();
+        tip.show();
+      });
+    },
+
     initSlider: function() {
       $("#js-security-slider").slick({});
       $("#js-security-inner-slider").slick({});
@@ -390,6 +413,7 @@
     initAllPlugins: function() {
       this.initShowSubMenu();
       this.initShowOrderForm();
+      this.initShowContactForm();
       this.initSlider();
     }
   };

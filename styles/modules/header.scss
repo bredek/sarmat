@@ -81,11 +81,12 @@
   .sub-menu {
     position: absolute;
     bottom: 0;
+    left: 17.5%;
     display: flex;
     justify-content: space-between;
     margin-top: 65px;
     width: 77.5%;
-    height: 225px; // animation: blur 0s forwards;
+    height: 225px;
     background: rgba(0,0,0,.5);
     ul {
       width: 100%;

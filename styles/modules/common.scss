@@ -61,8 +61,7 @@ section {
       button {
         margin-top: 20px;
       }
-
-      &:first-child{
+      &:first-child {
         background-color: $main-grey;
         .content-holder {
           margin-left: 35%;
@@ -71,9 +70,7 @@ section {
       &:last-child {
         background-color: $light-grey;
       }
-
     }
-
   }
 }
 
@@ -92,6 +89,15 @@ h2 {
   color: #ffffff;
   line-height: 49px;
   letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff;
+  letter-spacing: 1.75px;
+  line-height: 16px;
   text-transform: uppercase;
 }
 

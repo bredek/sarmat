@@ -1,0 +1,35 @@
+section.become-partner {
+  .section-container {
+    .col:last-child {
+      width: 100%;
+      background-color: transparent;
+      background: url(../img/pictures/become-partner.jpg) 50% 50% no-repeat;
+      background-size: cover;
+    }
+    .col:first-child {
+      .content-holder,
+      .form-holder {
+        max-width: 460px;
+        width: 100%;
+        margin-top: 255px;
+        margin-left: 17.5%;
+        h4 {
+          margin-top: 10px;
+        }
+        button {
+          margin-top: 60px;
+        }
+      }
+      .form-holder {
+        height: 350px;
+        margin-top: 25px;
+        button {
+          margin-top: 30px;
+        }
+        h2{
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}

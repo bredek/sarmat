@@ -12,78 +12,32 @@
   <body></body>
 </html>
 <div class="main">
-  <section class="cyber-security">
+  <section class="become-partner">
     <div class="container section-container">
       <div class="col">
         <div class="content-holder">
-          <h1>кибер<br/>безопасность</h1>
-          <p>Мы защищаем информационное пространство бизнеса</p>
-          <button>Заказать услугу</button>
+          <h1>стать партнером</h1>
+          <h3 class="js-contact-form-tip">становись партнером охранной системы сармат и получай интересные, выгодные предложения от сотрудничества с нами</h3>
+          <button class="js-contact-form-tip" id="js-show-contact-form">Заказать услугу</button>
         </div>
-      </div>
-      <div class="col">
-        <div class="slider-holder">
-          <div class="section-slider" id="js-sybcer-security-slider">
-            <div class="slide"><img src="img/pictures/cyber-security.jpg" alt="cyber-security"/></div>
-            <div class="slide content-slide">
-              <div class="left-side">
-                <p>Разрабатываем систему защиты онлайн активности бизнеса и ключевых сотрудников;</p>
-                <p>Защищаем онлайн активности бизнеса от несанкционированных действий – неавторизированное копирование, обход лицензионных ограничений;</p>
-                <p>Контролируем безопасность внутренних коммуникаций изнеса, информационной системы офиса и персонала.</p>
-              </div>
-              <div class="right-side">
-                <h2>персональная<br/>безопасность<br/>и безопасность<br/>бизнеса</h2>
-              </div>
-            </div>
-            <div class="slide content-slide">
-              <div class="left-side">
-                <p>Анализируем существующие информационные системы;</p>
-                <p>Разрабатываем систему информационной безопасности бизнеса;</p>
-                <p>Разрабатываем план рекомендаций по оптимальным способам защиты онлайн ресурсов;</p>
-                <p>Проверяем надёжность защиты онлайн ресурсов, тестируя систему на проникновение. Чтобы выявить и устранить уязвимые места, мы подконтрольно генерируем большую нагрузку на всех уровнях сетевых протоколов, выявляем и устраняем уязвимые места.</p>
-              </div>
-              <div class="right-side">
-                <h2>проектирование<br/>и реализация<br/>стратегии<br/>защиты</h2>
-              </div>
-            </div>
-            <div class="slide content-slide">
-              <div class="left-side">
-                <p>Если инцидент вторжения уже произошёл, мы:</p>
-                <p>Разрабатываем инструменты оперативной помощи атакованным системам;</p>
-                <p>Отслеживаем и обезвреживаем контрольные центры редоносных ПО;</p>
-                <p>Расследуем инцидент ­– проводим криминалистическую экспертизу и готовим пакет документов для уголовного дела;</p>
-                <p>Составляем план работы по предотвращению инцидентов этого типа.</p>
-              </div>
-              <div class="right-side">
-                <h2>обработка<br/>инцидентов<br/>компьютерной<br/>забезопасности</h2>
-              </div>
-            </div>
+        <div class="form-holder" id="js-contact-form-holder">
+          <div class="form-content">
+            <form>
+              <input type="text" placeholder="имя"/>
+              <input type="text" placeholder="email"/>
+              <input type="text" placeholder="номер телефона"/>
+            </form>
+            <button type="submit" id="js-contact-form-submit">Связаться</button><img class="cross" src="img/icons/cross.svg" alt="cross"/>
+          </div>
+        </div>
+        <div class="form-holder" id="js-thanks-contact-holder">
+          <div class="thanks-content">
+            <h2>Спасибо</h2>
+            <h4>менеджер сармат свяжется с вами после обработки запроса</h4><img class="cross" id="js-close-contact-form" src="img/icons/cross.svg" alt="cross"/>
           </div>
         </div>
       </div>
     </div>
-    <ul class="inner-sub-menu">
-      <li><img src="img/icons/security.svg"/>
-        <h4>охрана<br/>физических лиц</h4>
-        <p>Комплексная охрана физических лиц, семьи, жилья, офиса и заго-родного дома. Комплексная охрана работает круглосуточно, днем, ночью, на несколько часов</p>
-      </li>
-      <li><img src="img/icons/transport.svg"/>
-        <h4>перевозка<br/>и сопровождение</h4>
-        <p>Сопровождаем ценные бумаги, материальные ценности, важные грузы, лиц, которые перевозят ценный груз</p>
-      </li>
-      <li><img src="img/icons/vip-estate.svg"/>
-        <h4>элитная<br/>недвижимость</h4>
-        <p>Мы контролируем безопасность на любой территории</p>
-      </li>
-      <li><img src="img/icons/vip-buildings.svg"/>
-        <h4>охрана<br/>vip заведений</h4>
-        <p>Мы контролируем безопасность в заведении любого типа. Охраняем рестораны, клубы, загородные комплексы</p>
-      </li>
-      <li class="active"><img src="img/icons/cyber-security-active.svg"/>
-        <h4>охрана<br/>vip заведений</h4>
-        <p>Мы защищаем информационное пространство бизнеса</p>
-      </li>
-    </ul>
   </section>
 </div>
 <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
