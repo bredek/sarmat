@@ -45,18 +45,33 @@
   }
   .content-holder {
     margin-left: 7%;
+    @include mobile {
+      position: absolute;
+      bottom: 100px;
+      margin-left: 0;
+    }
   }
   h1 {
     color: #ffffff;
     margin-top: 200px;
+    @include mobile {
+      margin-top: 300px;
+    }
   }
-  p {
+  h4 {
     max-width: 270px;
     margin-top: 20px;
+    @include mobile {
+      max-width: 80%;
+      margin-top: 0;
+    }
   }
   .socials-holder {
     margin-top: 110px;
     width: 125px;
+    @include mobile {
+      margin-top: 50px;
+    }
   }
   .sub-menu {
     position: absolute;
@@ -79,6 +94,9 @@
           border-right: none;
         }
       }
+    }
+    @include mobile {
+      display: none;
     }
   }
 }

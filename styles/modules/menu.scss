@@ -1,4 +1,4 @@
-.menu-holder{
+.menu-holder {
   position: absolute;
   z-index: 1;
   width: 100%;
@@ -9,15 +9,73 @@
     rgba(49, 49, 49, 0) 85%
   );
   .menu {
+    position: relative;
     width: 75%;
     margin: 0 auto;
-    left: 17.5%;
     height: 125px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     @include mobile {
       height: 75px;
+      width: 100%;
+      padding: 0 20px;
+      box-sizing: border-box;
+    }
+    ul {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 27.5%;
+      li {
+        &.menu-toggle {
+          position: relative;
+          border-bottom: 1px solid white;
+          padding-bottom: 5px;
+          padding-top: 5px;
+          padding-right: 0;
+          &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 8px;
+            right: -15px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 5px 0 5px 10px;
+            border-color: transparent transparent transparent #007bff;
+            transition: 0.3s ease;
+          }
+          &.opened {
+            &:after {
+              transform: rotate(90deg) translateX(-1px);
+            }
+          }
+        }
+        a {
+          font-weight: 500;
+          font-size: 12px;
+          color: #ffffff;
+          letter-spacing: 1.5px;
+          text-transform: uppercase;
+        }
+      }
+      &.mobile-menu{
+        position: absolute;
+        top: 55px;
+        right: 0;
+        width: 125px;
+        padding: 20px 25px;
+        box-sizing: border-box;
+        background: rgba(0,0,0,.4);
+        li{
+          margin-top: 20px;
+        }
+      }
+      @include mobile {
+        display: none;
+      }
     }
     .left-side,
     .right-side {
@@ -25,46 +83,50 @@
       justify-content: space-between;
       align-items: center;
     }
+    .logo-holder {
+      img {
+        max-width: 100%;
+      }
+    }
+    .left-side {
+      @include mobile {
+        width: 30%;
+      }
+      .logo-holder {
+        @include mobile {
+          width: 40px;
+          height: 75px;
+        }
+      }
+      ul {
+        @include mobile {
+          display: none;
+        }
+      }
+    }
     .right-side {
       width: 80%;
-      ul {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 27.5%;
-        li {
-          &.menu-toggle {
-            position: relative;
-            border-bottom: 1px solid white;
-            padding-bottom: 5px;
-            padding-top: 5px;
-            padding-right: 0;
-            &:after {
-              content: "";
-              display: block;
-              position: absolute;
-              top: 8px;
-              right: -15px;
-              width: 0;
-              height: 0;
-              border-style: solid;
-              border-width: 5px 0 5px 10px;
-              border-color: transparent transparent transparent #007bff;
-              transition: 0.3s ease;
-            }
-            &.opened {
-              &:after {
-                transform: rotate(90deg) translateX(-1px);
-              }
-            }
-          }
-          a {
-            font-weight: 500;
-            font-size: 12px;
-            color: #ffffff;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-          }
+      @include mobile {
+        width: 70%;
+      }
+      .logo-holder {
+        @include mobile {
+          width: 115px;
+          height: 10px;
+        }
+      }
+      .hamburger {
+        padding: 0;
+        .hamburger-inner,
+        .hamburger-inner::after,
+        .hamburger-inner::before {
+          background-color: white;
+          width: 25px;
+          height: 2px;
+        }
+        .hamburger-box {
+          width: 25px;
+          height: 20px;
         }
       }
     }

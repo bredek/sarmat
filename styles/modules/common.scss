@@ -43,8 +43,7 @@ section {
 .container {
   width: 75%;
   margin: 0 auto;
-  
-  @include mobile{
+  @include mobile {
     width: 100%;
     padding: 0 20px;
     box-sizing: border-box;
@@ -88,6 +87,10 @@ h1 {
   line-height: 99px;
   letter-spacing: 0;
   text-transform: uppercase;
+  @include mobile {
+    font-size: 36px;
+    line-height: 45px;
+  }
 }
 
 h2 {
@@ -106,6 +109,11 @@ h3 {
   letter-spacing: 1.75px;
   line-height: 16px;
   text-transform: uppercase;
+  @include mobile{
+    font-size: 11px;
+    letter-spacing: 1.38px;
+    line-height: 13px;
+  }
 }
 
 h4 {

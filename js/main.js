@@ -355,6 +355,18 @@
       });
     },
 
+    initShowMobileMenu: function() {
+      var btn = $("#js-burger-toggle"), 
+        menu = $("#js-mobile-menu");
+
+      btn.on("click", function(e) {
+        e.preventDefault();
+
+        btn.toggleClass("is-active");
+        menu.fadeToggle();
+      });
+    },
+
     initShowOrderForm: function() {
       var showBtn = $("#js-show-form"),
         formHolder = $("#js-form-holder"),
@@ -415,6 +427,7 @@
       this.initShowOrderForm();
       this.initShowContactForm();
       this.initSlider();
+      this.initShowMobileMenu();
     }
   };
 
