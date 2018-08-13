@@ -1,6 +1,23 @@
+section.inner-section{
+  @include mobile{
+    background-color: $dark-grey;
+  }
+}
 .container.section-container{
+  @include mobile{
+    width: 100%;
+    padding: 0;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    .col{
+      width: 100%;
+    }
+  }
   .col:first-child {
     padding-top: 85px;
+    @include mobile {
+      padding-top: 35px;
+    }
   }
   .col:last-child {
     padding-top: 0;
@@ -13,6 +30,11 @@
   .content-holder {
     position: relative;
     width: 55%;
+    @include mobile {
+      width: 100%;
+      padding: 0 20px;
+      box-sizing: border-box;
+    }
     button {
       cursor: pointer;
     }

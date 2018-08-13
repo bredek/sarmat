@@ -1,11 +1,15 @@
 @import "modules/vars.scss";
 @import "modules/mixins.scss";
-
 body {
   font-family: "Roboto", Arial, sans-serif;
   font-size: 12px;
   color: #ffffff;
   letter-spacing: 1.5px;
+  @include mobile {
+    font-size: 10px;
+    line-height: 11px;
+    letter-spacing: 0;
+  }
 }
 
 section {
@@ -72,9 +76,15 @@ section {
         .content-holder {
           margin-left: 35%;
         }
+        @include mobile {
+          background-color: transparent;
+        }
       }
       &:last-child {
         background-color: $light-grey;
+        @include mobile {
+          background-color: transparent;
+        }
       }
     }
   }
@@ -109,7 +119,7 @@ h3 {
   letter-spacing: 1.75px;
   line-height: 16px;
   text-transform: uppercase;
-  @include mobile{
+  @include mobile {
     font-size: 11px;
     letter-spacing: 1.38px;
     line-height: 13px;
@@ -143,4 +153,8 @@ button,
   text-transform: uppercase;
   letter-spacing: 0.5px;
   text-align: center;
+}
+
+img {
+  max-width: 100%;
 }

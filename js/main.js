@@ -126,9 +126,9 @@
     //     .removeClass("fixBody");
     // },
 
-    // checkMedia: function(resolution) {
-    //   return window.matchMedia(resolution).matches;
-    // },
+    checkMedia: function(resolution) {
+      return window.matchMedia(resolution).matches;
+    },
 
     // scroll: function(scrollTo, speed) {
     //   $("html, body").animate(
@@ -356,7 +356,7 @@
     },
 
     initShowMobileMenu: function() {
-      var btn = $("#js-burger-toggle"), 
+      var btn = $("#js-burger-toggle"),
         menu = $("#js-mobile-menu");
 
       btn.on("click", function(e) {
@@ -373,13 +373,14 @@
         contentHolder = $("#js-content-holder"),
         thanksHolder = $("#js-thanks-holder"),
         closeBtn = $("#js-close-form");
-        submitBtn = $("#js-form-submit");
+      submitBtn = $("#js-form-submit");
 
-      showBtn.on("click", function(e) {
-        formHolder.show();
-        contentHolder.hide();
-      });
-      submitBtn.on('click', function (e) {
+      if (this.checkMedia())
+        showBtn.on("click", function(e) {
+          formHolder.show();
+          contentHolder.hide();
+        });
+      submitBtn.on("click", function(e) {
         thanksHolder.show();
         formHolder.hide();
       });
@@ -396,13 +397,13 @@
         tip = $(".js-contact-form-tip "),
         thanksHolder = $("#js-thanks-contact-holder"),
         closeBtn = $("#js-close-contact-form");
-        submitBtn = $("#js-contact-form-submit");
+      submitBtn = $("#js-contact-form-submit");
 
       showBtn.on("click", function(e) {
         formHolder.show();
         tip.hide();
       });
-      submitBtn.on('click', function (e) {
+      submitBtn.on("click", function(e) {
         thanksHolder.show();
         formHolder.hide();
       });
@@ -453,7 +454,7 @@ $(document).ready(function() {
     // beforeMove: function(index) {},  // This option accepts a callback function. The function will be called before the page moves.
     afterMove: function(index) {
       console.log(index);
-      if (index === 2) {
+      if (index === 2 && plg.checkMedia("(min-width: 1024px)")) {
         $(".avoid-assasination .col:first-child h1").addClass(
           "animated fadeInLeft"
         );
