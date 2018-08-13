@@ -1,28 +1,8 @@
 .header {
   position: relative;
-  background-image: linear-gradient(
-      -180deg,
-      #000000 0%,
-      rgba(49, 49, 49, 0) 85%
-    ),
-    url("../img/bg/hero_bg.jpg");
+  background-image: url("../img/bg/hero_bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  .menu {
-    height: 125px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .left-side,
-  .right-side {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .right-side {
-    width: 80%;
-  }
   ul {
     display: flex;
     justify-content: space-between;
@@ -87,7 +67,7 @@
     margin-top: 65px;
     width: 77.5%;
     height: 225px;
-    background: rgba(0,0,0,.5);
+    background: rgba(0, 0, 0, 0.5);
     ul {
       width: 100%;
       li {
