@@ -1,6 +1,6 @@
 section.inner-section{
   @include mobile{
-    background-color: $dark-grey;
+    background-color: $main-grey;
   }
 }
 .container.section-container{
@@ -47,6 +47,17 @@ section.inner-section{
     padding: 30px;
     box-sizing: border-box;
     text-align: center;
+    @include mobile{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 3;
+      form{
+        margin-top: 150px;
+      }
+    }
     form {
       input {
         margin-top: 16px;
@@ -96,6 +107,10 @@ section.inner-section{
     .thanks-content {
       h2 {
         margin-top: 100px;
+        @include mobile{
+          font-size: 42px;
+          margin-bottom: 20px;
+        }
       }
       h4 {
         margin: 10px auto 0;
@@ -107,13 +122,23 @@ section.inner-section{
     width: 80%;
     height: 540px;
     margin: 50px auto 0;
+    @include mobile {
+      width: 100%;
+      height: 225px;
+    }
     .slide {
       height: 540px;
       overflow: hidden;
+      @include mobile {
+        height: 225px;
+      }
       &.content-slide {
         display: flex; // justify-content: space-between;
         background: black; // padding: 75px 45px;
         box-sizing: border-box;
+        @include mobile{
+          flex-direction: row-reverse;
+        }
         .left-side,
         .right-side {
           background: transparent;
@@ -128,6 +153,9 @@ section.inner-section{
             &:first-child {
               margin-top: 0;
             }
+            @include mobile{
+              margin-top: 10px;
+            }
           }
           h4{
             margin-top: 35px;
@@ -137,10 +165,24 @@ section.inner-section{
           padding-right: 5%;
           margin: 75px 0 75px 5%;
           border-right: 1px solid white;
+          @include mobile{
+            width: 70%;
+            padding-left: 5%;
+            padding-right: 0;
+            margin: 25px 5% 25px 0;
+            border-left: 1px solid white;
+            border-right: none;
+          }
         }
         .right-side {
           padding-left: 5%;
           margin: 75px 5% 75px 0;
+          @include mobile{
+            width: 30%;
+            padding-left: 0;
+            padding-right: 5%;
+            margin: 25px 0 25px 5%;
+          }
         }
         &.straight {
           flex-direction: column;
@@ -224,16 +266,22 @@ section.inner-section{
       }
       &.slick-next {
         right: 45%;
+        @include mobile{
+          right: 40%;
+        }
         &:after {
           border-color: transparent transparent transparent white;
-          border-width: 10px 0 5px 15px;
+          border-width: 6px 0 5px 15px;
         }
       }
       &.slick-prev {
         left: 45%;
+        @include mobile{
+          left: 40%;
+        }
         &:after {
           border-color: transparent white transparent transparent;
-          border-width: 10px 15px 5px 0;
+          border-width: 6px 15px 5px 0;
         }
       }
     }

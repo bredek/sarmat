@@ -375,11 +375,10 @@
         closeBtn = $("#js-close-form");
       submitBtn = $("#js-form-submit");
 
-      if (this.checkMedia())
-        showBtn.on("click", function(e) {
-          formHolder.show();
-          contentHolder.hide();
-        });
+      showBtn.on("click", function(e) {
+        formHolder.show();
+        contentHolder.hide();
+      });
       submitBtn.on("click", function(e) {
         thanksHolder.show();
         formHolder.hide();
