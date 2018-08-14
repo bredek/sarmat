@@ -2,7 +2,8 @@ section.inner-section.vip-estate
     .container.section-container
         .col
             .content-holder
-                h1 элитная <br/>недви-<br/>жимость
+                h1.hide-mobile элитная <br/>недви-<br/>жимость
+                h1.show-mobile элитная <br/>недвижимость
                 p Мы контролируем безопасность на любой территории
                 button Заказать услугу
         .col
@@ -10,12 +11,24 @@ section.inner-section.vip-estate
                 .section-slider#js-vip-estate-slider
                     .slide
                         img(src="img/pictures/vip-estate.jpg", alt="vip-estate")
-                    .slide.content-slide
+                    .slide.content-slide.hide-mobile
                         .left-side
                             p Разрабатываем стратегию безопасности недвижимости и территории;
                             p Группа охраны непрерывно контролирует происхо-дящее на всей территории. Для полноценного контроля используем все доступные каналы видеонаблюдения: камеры слежения по периметру территории и в помещениях, квадрокоптеры;
                             p Блокируем несанкционированный доступ на объекты;
                             p Решаем конфликты на территории недвижимости.
+                        .right-side
+                            h2 как мы<br/>охраняем
+                    .slide.content-slide.show-mobile
+                        .left-side
+                            p Разрабатываем стратегию безопасности недвижимости и территории;
+                            p Группа охраны непрерывно контролирует происхо-дящее на всей территории.
+                        .right-side
+                            h2 как мы<br/>охраняем
+                    .slide.content-slide.show-mobile
+                        .left-side
+                            p Используем все доступные каналы видеонаблюдения: камеры слежения по периметру территории и в помещениях, квадрокоптеры;
+                            p Блокируем несанкционированный доступ на объекты;
                         .right-side
                             h2 как мы<br/>охраняем
     ul.inner-sub-menu
