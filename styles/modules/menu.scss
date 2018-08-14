@@ -62,6 +62,7 @@
         }
       }
       &.mobile-menu{
+        display: none;
         position: absolute;
         top: 55px;
         right: 0;
@@ -117,6 +118,10 @@
       }
       .hamburger {
         padding: 0;
+        display: none;
+        @include mobile{
+          display: block;
+        }
         .hamburger-inner,
         .hamburger-inner::after,
         .hamburger-inner::before {
