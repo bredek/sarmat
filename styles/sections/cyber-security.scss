@@ -2,14 +2,20 @@ section.cyber-security{
   .col:first-child {
     p{
       margin-top: 55px;
+      @include mobile{
+        margin-top: 20px;
+      }
     }
     button{
       margin-top: 65px;
+      @include mobile{
+        margin-top: 20px;
+      }
     }
   }
   .col:last-child {
     p{
-      margin-top: 18px !important;
+      // margin-top: 18px !important;
       &:first-child{
         margin-top: 0 !important; 
       }
