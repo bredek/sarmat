@@ -414,10 +414,10 @@
     },
 
     initSlider: function() {
-      if(this.checkMedia("(max-width: 414px)")){
-        $('.hide-mobile').remove();
+      if (this.checkMedia("(max-width: 414px)")) {
+        $(".hide-mobile").remove();
       }
-      
+
       $("#js-security-slider").slick({});
       $("#js-security-inner-slider").slick({});
       $("#js-transporting-slider").slick({});
