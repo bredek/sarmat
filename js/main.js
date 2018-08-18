@@ -511,7 +511,9 @@ $(document).ready(function() {
         );
       } else if (index === 3 && plg.checkMedia("(min-width: 1024px)")) {
         $("#js-security-slider").slick({});
-        $("#js-security-inner-slider").slick({});
+        $("#js-security-inner-slider").slick({
+          variableWidth: true
+        });
 
         $(".service.service-active")
           .find(".content-holder")

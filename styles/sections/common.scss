@@ -14,7 +14,7 @@ section.inner-section{
     }
   }
   .col:first-child {
-    padding-top: 145px;
+    padding-top: 155px;
     @include mobile {
       padding-top: 35px;
     }
@@ -119,15 +119,18 @@ section.inner-section{
     }
   }
   .section-slider {
-    width: 80%;
-    height: 540px;
-    margin: 70px auto 0;
+    width: 450px;
+    height: 450px;
+    margin: 120px auto 0;
     @include mobile {
       width: 100%;
       height: 225px;
     }
     .slide {
-      height: 540px;
+      // height: 540px;
+      height: 450px;
+      width: 450px !important;
+
       overflow: hidden;
       @include mobile {
         height: 225px;
@@ -149,7 +152,7 @@ section.inner-section{
             font-size: 13px;
             color: #ffffff;
             letter-spacing: 0;
-            margin-top: 35px;
+            margin-top: 15px;
             &:first-child {
               margin-top: 0;
             }
