@@ -1417,6 +1417,24 @@ html {
   animation-name: fadeInLeft;
 }
 
+@keyframes fadeInLeftLonger {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-50px, 0, 0);
+    transform: translate3d(-50px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInLeftLonger {
+  -webkit-animation-name: fadeInLeftLonger;
+  animation-name: fadeInLeftLonger;
+}
+
 @-webkit-keyframes fadeInLeftBig {
   from {
     opacity: 0;

@@ -14,7 +14,7 @@ section.inner-section{
     }
   }
   .col:first-child {
-    padding-top: 85px;
+    padding-top: 145px;
     @include mobile {
       padding-top: 35px;
     }
@@ -163,7 +163,7 @@ section.inner-section{
         }
         .left-side {
           padding-right: 5%;
-          margin: 75px 0 75px 5%;
+          margin: 45px 0 45px 5%;
           border-right: 1px solid white;
           @include mobile{
             width: 70%;
@@ -176,7 +176,7 @@ section.inner-section{
         }
         .right-side {
           padding-left: 5%;
-          margin: 75px 5% 75px 0;
+          margin: 45px 5% 45px 0;
           @include mobile{
             width: 30%;
             padding-left: 0;

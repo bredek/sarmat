@@ -30,8 +30,16 @@ section {
       padding: 30px;
       box-sizing: content-box;
       background: $dark-grey;
+      cursor: pointer;
+      transition: .3s ease;
       &.active {
         background: black;
+        &:hover{
+          background: black;
+        }
+      }
+      &:hover{
+        background: $main-grey;
       }
       h4 {
         margin-top: 28px;
@@ -61,6 +69,16 @@ section {
     height: 100%;
     display: flex;
     justify-content: space-between;
+    &.service {
+      display: none;
+      &-active {
+        display: flex;
+      }
+      .content-holder,
+      .slider-holder{
+        opacity: 0;
+      }
+    }
     .col {
       width: 50%;
       p {
@@ -180,12 +198,12 @@ img {
 }
 
 .show-mobile {
-  display: none;
+  display: none !important;
 }
 
 @include mobile {
   .show-mobile {
-    display: block;
+    display: block !important; 
   }
   .hide-mobile {
     display: none !important;

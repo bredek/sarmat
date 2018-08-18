@@ -1,5 +1,5 @@
 section.inner-section.private-security
-    .container.section-container
+    .container.section-container.service.service-active#service-security
         .col
             .content-holder#js-content-holder
                 h1 охрана<br/>физических<br/>лиц
@@ -105,24 +105,112 @@ section.inner-section.private-security
                                 .inner-slider-info
                                     p Mercedes-Benz G 350vAMG Diesel 2013
                                     h2 выбор автомобиля
+    .container.section-container.service#service-transporting
+        .col
+            .content-holder
+                h1.hide-mobile перевозка <br/>и сопровож-<br/>дение
+                h1.show-mobile перевозка <br/>и сопровождение
+                p Сопровождаем ценные бумаги, материальные ценности, важные грузы, лиц, которые перевозят ценный груз
+                button Заказать услугу
+        .col
+            .slider-holder
+                .section-slider#js-transporting-slider
+                    .slide
+                        img(src="img/pictures/transporting.jpg", alt="transporting")
+                    .slide.content-slide
+                        .left-side
+                            p Разрабатываем план сопровождения груза;
+                            p Тайно и открыто контролируем условия безопасности;
+                            p Выстраиваем самый безопасный и надёжный маршрут;
+                            p.hide-mobile Определяем запасные маршруты;
+                            p.hide-mobile Во время перевозки контролируем состояние груза.
+                            h4.hide-mobile Гарантируем конфиденциальность и абсолютную сохранность драгоценного груза
+                        .right-side
+                            h2 как мы<br/>работаем
+                    .slide.content-slide.show-mobile
+                        .left-side
+                            p Определяем запасные маршруты;
+                            p Во время перевозки контролируем состояние груза.
+                            p Гарантируем конфиденциальность и абсолютную сохранность драгоценного груза
+                        .right-side
+                            h2 как мы<br/>работаем
+    .container.section-container.service#service-vip-estate
+        .col
+            .content-holder
+                h1.hide-mobile элитная <br/>недви-<br/>жимость
+                h1.show-mobile элитная <br/>недвижимость
+                p Мы контролируем безопасность на любой территории
+                button Заказать услугу
+        .col
+            .slider-holder
+                .section-slider#js-vip-estate-slider
+                    .slide
+                        img(src="img/pictures/vip-estate.jpg", alt="vip-estate")
+                    .slide.content-slide.hide-mobile
+                        .left-side
+                            p Разрабатываем стратегию безопасности недвижимости и территории;
+                            p Группа охраны непрерывно контролирует происхо-дящее на всей территории. Для полноценного контроля используем все доступные каналы видеонаблюдения: камеры слежения по периметру территории и в помещениях, квадрокоптеры;
+                            p Блокируем несанкционированный доступ на объекты;
+                            p Решаем конфликты на территории недвижимости.
+                        .right-side
+                            h2 как мы<br/>охраняем
+                    .slide.content-slide.show-mobile
+                        .left-side
+                            p Разрабатываем стратегию безопасности недвижимости и территории;
+                            p Группа охраны непрерывно контролирует происхо-дящее на всей территории.
+                        .right-side
+                            h2 как мы<br/>охраняем
+                    .slide.content-slide.show-mobile
+                        .left-side
+                            p Используем все доступные каналы видеонаблюдения: камеры слежения по периметру территории и в помещениях, квадрокоптеры;
+                            p Блокируем несанкционированный доступ на объекты;
+                        .right-side
+                            h2 как мы<br/>охраняем
+    .container.section-container.service#service-vip-buildings
+        .col
+            .content-holder
+                h1.hide-mobile охрана <br/>vip<br/>заведений
+                h1.show-mobile охрана <br/>vip заведений
+                p Мы контролируем безопасность в заведении любого типа. Охраняем рестораны, клубы, загородные комплексы
+
+                button Заказать услугу
+        .col
+            .slider-holder
+                .section-slider#js-vip-buildings-slider
+                    .slide
+                        img(src="img/pictures/vip-buildings.jpg", alt="vip-buildings")
+                    .slide.content-slide
+                        .left-side
+                            p Разрабатываем стратегию безопасности заведения, гостей и персонала;
+                            p Группа охраны контролирует безопасность визуальным наблюдением и техническими средствами –видеонаблюдение и досмотровое оборудование;
+                            p.hide-mobile Работаем над профилактикой возникновения экстренных ситуаций и опасности;
+                            p.hide-mobile Решаем конфликты внутри заведения.
+                            h4.hide-mobile Мы контролируем безопасность в заведении любого типа. Охраняем рестораны, клубы, загородные комплексы.
+                        .right-side
+                            h2 как мы<br/>охраняем
+                    .slide.content-slide.show-mobile
+                        .left-side
+                            p Работаем над профилактикой возникновения экстренных ситуаций и опасности;
+                            p Решаем конфликты внутри заведения.
+                        .right-side
     ul.inner-sub-menu
-        li.active
+        li.active(data-triger="security")
             img(src="img/icons/security-active.svg")
             h4 охрана<br/>физических лиц
             p Комплексная охрана физических лиц, семьи, жилья, офиса и заго-родного дома. Комплексная охрана работает круглосуточно, днем, ночью, на несколько часов
-        li
+        li(data-triger="transporting")
             img(src="img/icons/transport.svg")
             h4 перевозка<br/>и сопровождение
             p Сопровождаем ценные бумаги, материальные ценности, важные грузы, лиц, которые перевозят ценный груз
-        li
+        li(data-triger="vip-estate")
             img(src="img/icons/teritory.svg")
             h4 элитная<br/>недвижимость
             p Мы контролируем безопасность на любой территории
-        li
+        li(data-triger="vip-buildings")
             img(src="img/icons/vip.svg")
             h4 охрана<br/>vip заведений
             p Мы контролируем безопасность в заведении любого типа. Охраняем рестораны, клубы, загородные комплексы
-        li
+        li(data-triger="cybersecurity")
             img(src="img/icons/vip2.svg")
             h4 охрана<br/>vip заведений
             p Мы защищаем информационное пространство бизнеса

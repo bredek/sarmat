@@ -418,12 +418,53 @@
         $(".hide-mobile").remove();
       }
 
+      // $("#js-security-slider").slick({});
+      // $("#js-security-inner-slider").slick({});
+      // $("#js-transporting-slider").slick({});
+      // $("#js-vip-estate-slider").slick({});
+      // $("#js-vip-buildings-slider").slick({});
+      $("#js-sybcer-security-slider").slick({});
+    },
+
+    initMenuAnimations: function() {
+      $(".service.service-active")
+        .find(".content-holder")
+        .addClass("animated fadeInLeft");
+      $(".service.service-active")
+        .find(".slider-holder")
+        .addClass("animated fadeInRight");
+
       $("#js-security-slider").slick({});
       $("#js-security-inner-slider").slick({});
-      $("#js-transporting-slider").slick({});
-      $("#js-vip-estate-slider").slick({});
-      $("#js-vip-buildings-slider").slick({});
-      $("#js-sybcer-security-slider").slick({});
+
+      $("ul.inner-sub-menu").on("click", function(e) {
+        var trigger = $(e.target).data("triger");
+        $(e.target)
+          .siblings()
+          .removeClass("active");
+        $(e.target).addClass("active");
+        $(".service").removeClass("service-active");
+        $("#service-" + trigger).addClass("service-active");
+
+        console.log('====================================');
+        console.log("#service-" + trigger);
+        console.log($("#js-"+trigger+"-slider"));
+        console.log('====================================');
+
+        // $("#js-transporting-slider").slick({});
+        $("#js-"+trigger+"-slider").slick({});
+
+        console.log('====================================');
+        console.log($(".service"));
+        console.log('====================================');
+
+        $(".service.service-active")
+          .find(".content-holder")
+          .addClass("animated faster fadeInLeftLonger");
+        $(".service.service-active")
+          .find(".slider-holder")
+          .addClass("animated faster delay-short fadeInRight");
+      });
     },
 
     initAllPlugins: function() {
@@ -432,6 +473,7 @@
       this.initShowContactForm();
       this.initSlider();
       this.initShowMobileMenu();
+      this.initMenuAnimations();
     }
   };
 
@@ -467,6 +509,16 @@ $(document).ready(function() {
         $(".avoid-assasination .col:last-child .image-holder").addClass(
           "animated fadeInRight"
         );
+      } else if (index === 3 && plg.checkMedia("(min-width: 1024px)")) {
+        $("#js-security-slider").slick({});
+        $("#js-security-inner-slider").slick({});
+
+        $(".service.service-active")
+          .find(".content-holder")
+          .addClass("animated fadeInLeft");
+        $(".service.service-active")
+          .find(".slider-holder")
+          .addClass("animated fadeInRight");
       }
     }, // This option accepts a callback function. The function will be called after the page moves.
     loop: false // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
