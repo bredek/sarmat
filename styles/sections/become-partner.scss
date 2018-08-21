@@ -32,6 +32,9 @@ section.become-partner {
             margin-top: 10px;
             max-width: 225px;
           }
+          @include tablet{
+            max-width: 425px;
+          }
         }
         button {
           margin-top: 60px;
@@ -52,17 +55,18 @@ section.become-partner {
         h2{
           margin-top: 0;
         }
+        button{
+          margin-top: 75px;
+        }
         @include mobile{
           width: 100vw;
           height: 100vh;
 
           form{
-            margin-top: 100px;
-            +button{
-              position: absolute;
-              bottom: 100px;
-              left: calc(50% - 190px);
-            }
+            margin-top: 150px;
+          }
+          .cross{
+            bottom: 75px;
           }
         }
       }

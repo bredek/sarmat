@@ -414,25 +414,21 @@
     },
 
     initSlider: function() {
-      if (this.checkMedia("(max-width: 414px)")) {
-        console.log("====================================");
-        console.log("true");
-        console.log("====================================");
+      if (this.checkMedia("(max-width: 1024px)")) {
+        // MOBILE
         $(".hide-mobile").remove();
-        $("#js-security-slider").slick({});
-        $("#js-security-inner-slider").slick({});
+        $(".desktop-services").remove();
         $("#js-transporting-slider").slick({});
-        // $("#js-vip-estate-slider").slick({});
-        // $("#js-vip-buildings-slider").slick({});
-        // $("#js-cyber-security-slider").slick({});
+        $("#js-vip-estate-slider").slick({});
+        $("#js-vip-buildings-slider").slick({});
+        $("#js-cyber-security-slider").slick({});
       } else {
+        // DESKTOP
         $(".show-mobile").remove();
-        console.log("====================================");
-        console.log("false");
-        console.log("====================================");
-        $("#js-security-slider").slick({});
-        $("#js-security-inner-slider").slick({});
+        $(".mobile-services").remove();
       }
+      $("#js-security-slider").slick({});
+      $("#js-security-inner-slider").slick({});
     },
 
     initMenuAnimations: function() {
@@ -496,12 +492,12 @@
     },
 
     initAllPlugins: function() {
-      this.initShowSubMenu();
-      this.initShowOrderForm();
-      this.initShowContactForm();
       this.initSlider();
       this.initShowMobileMenu();
       this.initMenuAnimations();
+      this.initShowSubMenu();
+      this.initShowOrderForm();
+      this.initShowContactForm();
     }
   };
 

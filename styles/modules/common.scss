@@ -127,6 +127,11 @@ section {
             margin-top: 20px;
           }
         }
+        @include tablet {
+          h1 {
+            max-width: 180px;
+          }
+        }
       }
       &:last-child {
         background-color: $light-grey;

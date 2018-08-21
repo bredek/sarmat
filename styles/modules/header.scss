@@ -68,6 +68,9 @@
       max-width: 80%;
       margin-top: 0;
     }
+    @include tablet{
+      margin-top: 10px;
+    }
   }
   .socials-holder {
     margin-top: 110px;

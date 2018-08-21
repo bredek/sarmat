@@ -1,12 +1,12 @@
 // mixins
 @mixin mobile {
-    @media (min-width: #{$mobile-width}) and (max-width: #{$tablet-width - 1px}) {
+    @media (max-width: #{$desktop-width}) {
         @content;
     }
 }
 
 @mixin tablet {
-    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @media (min-width: #{$mobile-width}) and (max-width: #{$desktop-width}) {
         @content;
     }
 }
@@ -18,7 +18,7 @@
 }
 
 @mixin desktop {
-    @media (min-width: #{$desktop-width}) and (max-width: #{$desktop-hd-width - 1px}) {
+    @media (min-width: #{$desktop-width}) and (max-width: #{$desktop-mid-width - 1px}) {
         @content;
     }
 }
