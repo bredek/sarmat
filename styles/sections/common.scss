@@ -42,7 +42,7 @@ section.inner-section{
   .form-holder {
     position: relative;
     display: none;
-    height: 492px;
+    height: 400px;
     background: black;
     padding: 30px;
     box-sizing: border-box;
@@ -88,7 +88,7 @@ section.inner-section{
     }
     button {
       width: 100%;
-      margin-top: 155px;
+      margin-top: 75px;
       border: none;
       outline: none;
       background: none;
@@ -121,7 +121,7 @@ section.inner-section{
   .section-slider {
     width: 450px;
     height: 450px;
-    margin: 120px auto 0;
+    margin: 100px auto 0;
     @include mobile {
       width: 100%;
       height: 225px;
@@ -129,10 +129,11 @@ section.inner-section{
     .slide {
       // height: 540px;
       height: 450px;
-      width: 450px !important;
+      width: 450px;
 
       overflow: hidden;
       @include mobile {
+        width: auto;
         height: 225px;
       }
       &.content-slide {
@@ -206,7 +207,7 @@ section.inner-section{
               margin: 0;
             }
             &.list {
-              margin-top: 40px;
+              margin-top: 20px;
               max-width: 80%;
               display: flex;
               justify-content: space-between;
@@ -229,7 +230,7 @@ section.inner-section{
             border-bottom: 1px solid white;
           }
           .inner-row {
-            margin: 50px 5% 0;
+            margin: 25px 5% 0;
             display: flex;
             justify-content: space-between;
             box-sizing: border-box;

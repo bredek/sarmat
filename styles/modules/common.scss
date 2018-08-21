@@ -77,6 +77,9 @@ section {
       .content-holder,
       .slider-holder{
         opacity: 0;
+        @include mobile{
+          opacity: 1;
+        }
       }
     }
     .col {
@@ -132,9 +135,9 @@ h1 {
 
 h2 {
   font-family: "HeadingCompressedPro", Arial, sans-serif;
-  font-size: 40px;
+  font-size: 30px;
   color: #ffffff;
-  line-height: 49px;
+  line-height: 45px;
   letter-spacing: 0;
   text-transform: uppercase;
   @include mobile {
@@ -203,7 +206,7 @@ img {
 
 @include mobile {
   .show-mobile {
-    display: block !important; 
+    display: flex !important; 
   }
   .hide-mobile {
     display: none !important;

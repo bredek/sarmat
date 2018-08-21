@@ -415,15 +415,24 @@
 
     initSlider: function() {
       if (this.checkMedia("(max-width: 414px)")) {
+        console.log("====================================");
+        console.log("true");
+        console.log("====================================");
         $(".hide-mobile").remove();
+        $("#js-security-slider").slick({});
+        $("#js-security-inner-slider").slick({});
+        $("#js-transporting-slider").slick({});
+        // $("#js-vip-estate-slider").slick({});
+        // $("#js-vip-buildings-slider").slick({});
+        // $("#js-cyber-security-slider").slick({});
+      } else {
+        $(".show-mobile").remove();
+        console.log("====================================");
+        console.log("false");
+        console.log("====================================");
+        $("#js-security-slider").slick({});
+        $("#js-security-inner-slider").slick({});
       }
-
-      $("#js-security-slider").slick({});
-      $("#js-security-inner-slider").slick({});
-      // $("#js-transporting-slider").slick({});
-      // $("#js-vip-estate-slider").slick({});
-      // $("#js-vip-buildings-slider").slick({});
-      // $("#js-cyber-security-slider").slick({});
     },
 
     initMenuAnimations: function() {
@@ -446,10 +455,10 @@
         $(".service").removeClass("service-active");
         $("#service-" + trigger).addClass("service-active");
 
-        console.log('====================================');
+        console.log("====================================");
         console.log("#service-" + trigger);
-        console.log($("#js-"+trigger+"-slider"));
-        console.log('====================================');
+        console.log($("#js-" + trigger + "-slider"));
+        console.log("====================================");
 
         // $("#js-transporting-slider").slick({});
         // console.log('====================================');
@@ -458,13 +467,24 @@
         // console.log(!!($("#js-"+trigger+"-slider").slick('getSlick')));
         // console.log('====================================');
 
-        $("#js-"+trigger+"-slider").slick({
-          variableWidth: true
+        $("#js-" + trigger + "-slider").slick({
+          variableWidth: true,
+          responsive: [
+            {
+              breakpoint: 480,
+              settings: {
+                variableWidth: false
+              }
+            }
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+          ]
         });
 
-        console.log('====================================');
+        console.log("====================================");
         console.log($(".service"));
-        console.log('====================================');
+        console.log("====================================");
 
         $(".service.service-active")
           .find(".content-holder")
@@ -528,7 +548,6 @@ $(document).ready(function() {
           .find(".slider-holder")
           .addClass("animated fadeInRight");
       } else if (index === 4 && plg.checkMedia("(min-width: 1024px)")) {
-
         $(".service.service-active")
           .find(".content-holder")
           .addClass("animated fadeInLeft");
