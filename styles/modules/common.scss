@@ -21,6 +21,7 @@ section {
     position: absolute;
     bottom: 0;
     left: 17.5%;
+  
     @include mobile {
       display: none;
     }
@@ -32,6 +33,15 @@ section {
       background: $dark-grey;
       cursor: pointer;
       transition: .3s ease;
+      @include desktop {
+        height: 45px;
+        display: flex;
+        padding: 30px 25px;
+        border-right: 1px solid black;
+        &:last-child{
+          border-right: none;
+        }
+      }
       &.active {
         background: black;
         &:hover{
@@ -43,6 +53,11 @@ section {
       }
       h4 {
         margin-top: 28px;
+        @include desktop {
+          font-size: 8px;
+          margin-top: 0;
+          margin-left: 10px;
+        }
       }
       p {
         margin-top: 18px;
@@ -50,6 +65,9 @@ section {
         line-height: 10px;
         color: #ffffff;
         letter-spacing: 0;
+        @include desktop {
+          display: none;
+        }
       }
     }
   }

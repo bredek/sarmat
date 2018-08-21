@@ -40,6 +40,9 @@
         color: #ffffff;
         letter-spacing: 1.5px;
         text-transform: uppercase;
+        @include desktop{
+          line-height: 20px;
+        }
       }
     }
   }
@@ -83,6 +86,9 @@
     width: 77.5%;
     height: 225px;
     background: rgba(0, 0, 0, 0.5);
+    @include desktop{
+      height: 180px;
+    }
     ul {
       width: 100%;
       li {
@@ -92,6 +98,9 @@
         border-right: 1px solid white;
         &:last-child {
           border-right: none;
+        }
+        @include desktop{
+          padding: 30px;
         }
       }
     }
