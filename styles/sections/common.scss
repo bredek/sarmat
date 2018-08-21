@@ -119,7 +119,7 @@ section.inner-section{
     }
   }
   .section-slider {
-    width: 80%;
+    width: 540px;
     height: 540px;
     margin: 70px auto 0;
     @include mobile {
@@ -128,6 +128,7 @@ section.inner-section{
     }
     .slide {
       height: 540px;
+      width: 540px;
       overflow: hidden;
       @include mobile {
         height: 225px;
