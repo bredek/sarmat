@@ -1,23 +1,23 @@
 section.inner-section.desktop-services
     .container.section-container.service.service-active#service-security
         .col
-            .content-holder#js-content-holder
+            .content-holder.js-content-holder
                 h1 охрана<br/>физических<br/>лиц
                 p Комплексная охрана физических лиц, семьи, жилья, офиса и загородного дома. Комплексная охрана работает круглосуточно, ночью, днём, на несколько часов.
-                button#js-show-form Заказать услугу
-            .content-holder.form-holder#js-form-holder
+                button.js-show-form Заказать услугу
+            .content-holder.form-holder.js-form-holder
                 .form-content
                     form
                         input(type="text" placeholder="имя")
                         input(type="text" placeholder="email")
                         input(type="text" placeholder="номер телефона")
-                    button(type="submit")#js-form-submit Заказать услугу
-                    img.cross(src="img/icons/cross.svg", alt="cross")
-            .content-holder.form-holder#js-thanks-holder
+                    button(type="submit").js-form-submit Заказать услугу
+                    img.cross.js-close-form(src="img/icons/cross.svg", alt="cross")
+            .content-holder.form-holder.js-thanks-holder
                 .thanks-content
                     h2 Спасибо
                     h4 менеджер сармат свяжется с вами после обработки запроса
-                    img.cross#js-close-form(src="img/icons/cross.svg", alt="cross")
+                    img.cross.js-close-form(src="img/icons/cross.svg", alt="cross")
         .col
             .slider-holder
                 .section-slider#js-security-slider
@@ -107,11 +107,24 @@ section.inner-section.desktop-services
                                     h2 выбор автомобиля
     .container.section-container.service#service-transporting
         .col
-            .content-holder
+            .content-holder.js-content-holder
                 h1.hide-mobile перевозка <br/>и сопровож-<br/>дение
                 h1.show-mobile перевозка <br/>и сопровождение
                 p Сопровождаем ценные бумаги, материальные ценности, важные грузы, лиц, которые перевозят ценный груз
-                button Заказать услугу
+                button.js-show-form Заказать услугу
+            .content-holder.form-holder.js-form-holder
+                .form-content
+                    form
+                        input(type="text" placeholder="имя")
+                        input(type="text" placeholder="email")
+                        input(type="text" placeholder="номер телефона")
+                    button(type="submit").js-form-submit Заказать услугу
+                    img.cross.js-close-form(src="img/icons/cross.svg", alt="cross")
+            .content-holder.form-holder.js-thanks-holder
+                .thanks-content
+                    h2 Спасибо
+                    h4 менеджер сармат свяжется с вами после обработки запроса
+                    img.cross.js-close-form(src="img/icons/cross.svg", alt="cross")
         .col
             .slider-holder
                 .section-slider#js-transporting-slider
@@ -136,11 +149,24 @@ section.inner-section.desktop-services
                             h2 как мы<br/>работаем
     .container.section-container.service#service-vip-estate
         .col
-            .content-holder
+            .content-holder.js-content-holder
                 h1.hide-mobile элитная <br/>недви-<br/>жимость
                 h1.show-mobile элитная <br/>недвижимость
                 p Мы контролируем безопасность на любой территории
-                button Заказать услугу
+                button.js-show-form  Заказать услугу
+            .content-holder.form-holder.js-form-holder
+                .form-content
+                    form
+                        input(type="text" placeholder="имя")
+                        input(type="text" placeholder="email")
+                        input(type="text" placeholder="номер телефона")
+                    button(type="submit").js-form-submit Заказать услугу
+                    img.cross.js-close-form(src="img/icons/cross.svg", alt="cross")
+            .content-holder.form-holder.js-thanks-holder
+                .thanks-content
+                    h2 Спасибо
+                    h4 менеджер сармат свяжется с вами после обработки запроса
+                    img.cross.js-close-form(src="img/icons/cross.svg", alt="cross")
         .col
             .slider-holder
                 .section-slider#js-vip-estate-slider
@@ -168,12 +194,24 @@ section.inner-section.desktop-services
                             h2 как мы<br/>охраняем
     .container.section-container.service#service-vip-buildings
         .col
-            .content-holder
+            .content-holder.js-content-holder
                 h1.hide-mobile охрана <br/>vip<br/>заведений
                 h1.show-mobile охрана <br/>vip заведений
                 p Мы контролируем безопасность в заведении любого типа. Охраняем рестораны, клубы, загородные комплексы
-
-                button Заказать услугу
+                button.js-show-form  Заказать услугу
+            .content-holder.form-holder.js-form-holder
+                .form-content
+                    form
+                        input(type="text" placeholder="имя")
+                        input(type="text" placeholder="email")
+                        input(type="text" placeholder="номер телефона")
+                    button(type="submit").js-form-submit Заказать услугу
+                    img.cross.js-close-form(src="img/icons/cross.svg", alt="cross")
+            .content-holder.form-holder.js-thanks-holder
+                .thanks-content
+                    h2 Спасибо
+                    h4 менеджер сармат свяжется с вами после обработки запроса
+                    img.cross.js-close-form(src="img/icons/cross.svg", alt="cross")
         .col
             .slider-holder
                 .section-slider#js-vip-buildings-slider
@@ -194,11 +232,24 @@ section.inner-section.desktop-services
                         .right-side
     .container.section-container.service#service-cyber-security
         .col
-            .content-holder
+            .content-holder.js-content-holder
                 h1.hide-mobile кибер<br/>безопасность
                 h1.show-mobile кибербезопасность
                 p Мы защищаем информационное пространство бизнеса
-                button Заказать услугу
+                button.js-show-form Заказать услугу
+            .content-holder.form-holder.js-form-holder
+                .form-content
+                    form
+                        input(type="text" placeholder="имя")
+                        input(type="text" placeholder="email")
+                        input(type="text" placeholder="номер телефона")
+                    button(type="submit").js-form-submit Заказать услугу
+                    img.cross.js-close-form(src="img/icons/cross.svg", alt="cross")
+            .content-holder.form-holder.js-thanks-holder
+                .thanks-content
+                    h2 Спасибо
+                    h4 менеджер сармат свяжется с вами после обработки запроса
+                    img.cross.js-close-form(src="img/icons/cross.svg", alt="cross")
         .col
             .slider-holder
                 .section-slider#js-cyber-security-slider
@@ -247,5 +298,5 @@ section.inner-section.desktop-services
             p Мы контролируем безопасность в заведении любого типа. Охраняем рестораны, клубы, загородные комплексы
         li(data-triger="cyber-security")
             img(src="img/icons/vip2.svg")
-            h4 охрана<br/>vip заведений
+            h4 кибер<br/>безопасность
             p Мы защищаем информационное пространство бизнеса
