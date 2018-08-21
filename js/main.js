@@ -440,7 +440,7 @@
       $(".service").removeClass("service-active");
       $("#service-" + trigger).addClass("service-active");
 
-      if(trigger != 'security'){
+      if (trigger != "security") {
         $("#js-" + trigger + "-slider").slick({
           variableWidth: true,
           responsive: [
@@ -493,20 +493,24 @@
               "animated fadeInRight"
             );
           } else if (index === 3 && _this.checkMedia("(min-width: 1024px)")) {
-
             $(".service.service-active")
               .find(".content-holder")
               .addClass("animated fadeInLeft");
             $(".service.service-active")
               .find(".slider-holder")
               .addClass("animated fadeInRight");
+            $(".inner-sub-menu")
+              .addClass("animated fadeInUp");
           } else if (index === 4 && _this.checkMedia("(min-width: 1024px)")) {
-            $(".service.service-active")
+            $(".become-partner")
               .find(".content-holder")
+              .add(".form-holder")
               .addClass("animated fadeInLeft");
-            $(".service.service-active")
-              .find(".slider-holder")
-              .addClass("animated fadeInRight");
+          } else if (index === 5 && _this.checkMedia("(min-width: 1024px)")) {
+            $(".map .section-container .content-holder")
+              .addClass("animated fadeInLeft");
+            $(".map .footer")
+              .addClass("animated fadeInUp");
           }
         }, // This option accepts a callback function. The function will be called after the page moves.
         loop: false // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.

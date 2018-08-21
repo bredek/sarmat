@@ -12,6 +12,13 @@ section.cyber-security{
         margin-top: 20px;
       }
     }
+    form{
+      +button{
+        @include mobile{
+          margin-top: 75px;
+        }
+      }
+    }
   }
   .col:last-child {
     p{

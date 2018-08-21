@@ -21,7 +21,7 @@ section {
     position: absolute;
     bottom: 0;
     left: 17.5%;
-  
+    opacity: 0;
     @include mobile {
       display: none;
     }
@@ -67,6 +67,61 @@ section {
         letter-spacing: 0;
         @include desktop {
           display: none;
+        }
+      }
+      .icon-holder{
+        width: 55px;
+        height: 50px;
+      }
+      &:first-child{
+        .icon-holder{
+          background: url(../img/icons/security.svg) 50% 50% no-repeat;
+        }
+        &.active{
+          .icon-holder{
+            background: url(../img/icons/security-active.svg) 50% 50% no-repeat;
+          }
+        }
+      }
+      &:nth-child(2){
+        .icon-holder{
+          width: 74px;
+          background: url(../img/icons/transport.svg) 50% 50% no-repeat;
+        }
+        &.active{
+          .icon-holder{
+            background: url(../img/icons/transport-active.svg) 50% 50% no-repeat;
+          }
+        }
+      }
+      &:nth-child(3){
+        .icon-holder{
+          background: url(../img/icons/vip-estate.svg) 50% 50% no-repeat;
+        }
+        &.active{
+          .icon-holder{
+            background: url(../img/icons/vip-estate-active.svg) 50% 50% no-repeat;
+          }
+        }
+      }
+      &:nth-child(4){
+        .icon-holder{
+          background: url(../img/icons/vip-buildings.svg) 50% 50% no-repeat;
+        }
+        &.active{
+          .icon-holder{
+            background: url(../img/icons/vip-buildings-active.svg) 50% 50% no-repeat;
+          }
+        }
+      }
+      &:nth-child(5){
+        .icon-holder{
+          background: url(../img/icons/cyber-security.svg) 50% 50% no-repeat;
+        }
+        &.active{
+          .icon-holder{
+            background: url(../img/icons/cyber-security-active.svg) 50% 50% no-repeat;
+          }
         }
       }
     }

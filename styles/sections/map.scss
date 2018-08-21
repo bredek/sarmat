@@ -9,6 +9,7 @@ section.map {
       position: relative;
       z-index: 2;
       .content-holder {
+        opacity: 0;
         max-width: 460px;
         width: 100%;
         margin-top: 175px;
@@ -20,6 +21,7 @@ section.map {
           margin-top: 20px;
         }
         @include mobile {
+          opacity: 1;
           margin-top: 350px;
           margin-left: 0;
           h3 {
@@ -33,6 +35,7 @@ section.map {
     }
   }
   .footer {
+    opacity: 0;
     position: absolute;
     z-index: 5;
     bottom: 0;
@@ -56,6 +59,7 @@ section.map {
       justify-content: space-between;
     }
     @include mobile {
+      opacity: 1;
       height: 83px;
       .content-holder {
         margin-top: 20px;

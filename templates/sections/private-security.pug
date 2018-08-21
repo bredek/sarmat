@@ -1,23 +1,23 @@
 section.inner-section.mobile-services
-    .container.section-container.service.service-active#service-security
+    .container.section-container
         .col
-            .content-holder#js-content-holder
+            .content-holder.js-content-holder
                 h1 охрана<br/>физических<br/>лиц
                 p Комплексная охрана физических лиц, семьи, жилья, офиса и загородного дома. Комплексная охрана работает круглосуточно, ночью, днём, на несколько часов.
-                button#js-show-form Заказать услугу
-            .content-holder.form-holder#js-form-holder
+                button.js-show-form Заказать услугу
+            .content-holder.form-holder.js-form-holder
                 .form-content
                     form
                         input(type="text" placeholder="имя")
                         input(type="text" placeholder="email")
                         input(type="text" placeholder="номер телефона")
-                    button(type="submit")#js-form-submit Заказать услугу
-                    img.cross(src="img/icons/cross.svg", alt="cross")
-            .content-holder.form-holder#js-thanks-holder
+                    button(type="submit").js-form-submit Заказать услугу
+                    img.cross.js-close-form(src="img/icons/cross.svg", alt="cross")
+            .content-holder.form-holder.js-thanks-holder
                 .thanks-content
                     h2 Спасибо
                     h4 менеджер сармат свяжется с вами после обработки запроса
-                    img.cross#js-close-form(src="img/icons/cross.svg", alt="cross")
+                    img.cross.js-close-form(src="img/icons/cross.svg", alt="cross")
         .col
             .slider-holder
                 .section-slider#js-security-slider

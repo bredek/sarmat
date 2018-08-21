@@ -8,6 +8,12 @@ section.become-partner {
       background-size: cover;
     }
     .col:first-child {
+      .content-holder{
+        opacity: 0;
+        @include mobile{
+          opacity: 1;
+        }
+      }
       .content-holder,
       .form-holder {
         max-width: 361px;

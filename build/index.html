@@ -459,50 +459,55 @@
       </div>
     </div>
     <ul class="inner-sub-menu">
-      <li class="active" data-triger="security"><img src="img/icons/security-active.svg"/>
+      <li class="active" data-triger="security">
+        <div class="icon-holder"></div>
         <h4>охрана<br/>физических лиц</h4>
         <p>Комплексная охрана физических лиц, семьи, жилья, офиса и заго-родного дома. Комплексная охрана работает круглосуточно, днем, ночью, на несколько часов</p>
       </li>
-      <li data-triger="transporting"><img src="img/icons/transport.svg"/>
+      <li data-triger="transporting">
+        <div class="icon-holder"></div>
         <h4>перевозка<br/>и сопровождение</h4>
         <p>Сопровождаем ценные бумаги, материальные ценности, важные грузы, лиц, которые перевозят ценный груз</p>
       </li>
-      <li data-triger="vip-estate"><img src="img/icons/teritory.svg"/>
+      <li data-triger="vip-estate">
+        <div class="icon-holder"></div>
         <h4>элитная<br/>недвижимость</h4>
         <p>Мы контролируем безопасность на любой территории</p>
       </li>
-      <li data-triger="vip-buildings"><img src="img/icons/vip.svg"/>
+      <li data-triger="vip-buildings">
+        <div class="icon-holder"></div>
         <h4>охрана<br/>vip заведений</h4>
         <p>Мы контролируем безопасность в заведении любого типа. Охраняем рестораны, клубы, загородные комплексы</p>
       </li>
-      <li data-triger="cyber-security"><img src="img/icons/vip2.svg"/>
+      <li data-triger="cyber-security">
+        <div class="icon-holder"></div>
         <h4>кибер<br/>безопасность</h4>
         <p>Мы защищаем информационное пространство бизнеса</p>
       </li>
     </ul>
   </section>
   <section class="inner-section mobile-services">
-    <div class="container section-container service service-active" id="service-security">
+    <div class="container section-container">
       <div class="col">
-        <div class="content-holder" id="js-content-holder">
+        <div class="content-holder js-content-holder">
           <h1>охрана<br/>физических<br/>лиц</h1>
           <p>Комплексная охрана физических лиц, семьи, жилья, офиса и загородного дома. Комплексная охрана работает круглосуточно, ночью, днём, на несколько часов.</p>
-          <button id="js-show-form">Заказать услугу</button>
+          <button class="js-show-form">Заказать услугу</button>
         </div>
-        <div class="content-holder form-holder" id="js-form-holder">
+        <div class="content-holder form-holder js-form-holder">
           <div class="form-content">
             <form>
               <input type="text" placeholder="имя"/>
               <input type="text" placeholder="email"/>
               <input type="text" placeholder="номер телефона"/>
             </form>
-            <button type="submit" id="js-form-submit">Заказать услугу</button><img class="cross" src="img/icons/cross.svg" alt="cross"/>
+            <button class="js-form-submit" type="submit">Заказать услугу</button><img class="cross js-close-form" src="img/icons/cross.svg" alt="cross"/>
           </div>
         </div>
-        <div class="content-holder form-holder" id="js-thanks-holder">
+        <div class="content-holder form-holder js-thanks-holder">
           <div class="thanks-content">
             <h2>Спасибо</h2>
-            <h4>менеджер сармат свяжется с вами после обработки запроса</h4><img class="cross" id="js-close-form" src="img/icons/cross.svg" alt="cross"/>
+            <h4>менеджер сармат свяжется с вами после обработки запроса</h4><img class="cross js-close-form" src="img/icons/cross.svg" alt="cross"/>
           </div>
         </div>
       </div>
@@ -654,11 +659,27 @@
   <section class="inner-section transporting mobile-services">
     <div class="container section-container">
       <div class="col">
-        <div class="content-holder">
+        <div class="content-holder js-content-holder">
           <h1 class="hide-mobile">перевозка <br/>и сопровож-<br/>дение</h1>
           <h1 class="show-mobile">перевозка <br/>и сопровождение</h1>
           <p>Сопровождаем ценные бумаги, материальные ценности, важные грузы, лиц, которые перевозят ценный груз</p>
-          <button>Заказать услугу</button>
+          <button class="js-show-form">Заказать услугу</button>
+        </div>
+        <div class="content-holder form-holder js-form-holder">
+          <div class="form-content">
+            <form>
+              <input type="text" placeholder="имя"/>
+              <input type="text" placeholder="email"/>
+              <input type="text" placeholder="номер телефона"/>
+            </form>
+            <button class="js-form-submit" type="submit">Заказать услугу</button><img class="cross js-close-form" src="img/icons/cross.svg" alt="cross"/>
+          </div>
+        </div>
+        <div class="content-holder form-holder js-thanks-holder">
+          <div class="thanks-content">
+            <h2>Спасибо</h2>
+            <h4>менеджер сармат свяжется с вами после обработки запроса</h4><img class="cross js-close-form" src="img/icons/cross.svg" alt="cross"/>
+          </div>
         </div>
       </div>
       <div class="col">
@@ -718,11 +739,27 @@
   <section class="inner-section vip-estate mobile-services">
     <div class="container section-container">
       <div class="col">
-        <div class="content-holder">
+        <div class="content-holder js-content-holder">
           <h1 class="hide-mobile">элитная <br/>недви-<br/>жимость</h1>
           <h1 class="show-mobile">элитная <br/>недвижимость</h1>
           <p>Мы контролируем безопасность на любой территории</p>
-          <button>Заказать услугу</button>
+          <button class="js-show-form"> Заказать услугу</button>
+        </div>
+        <div class="content-holder form-holder js-form-holder">
+          <div class="form-content">
+            <form>
+              <input type="text" placeholder="имя"/>
+              <input type="text" placeholder="email"/>
+              <input type="text" placeholder="номер телефона"/>
+            </form>
+            <button class="js-form-submit" type="submit">Заказать услугу</button><img class="cross js-close-form" src="img/icons/cross.svg" alt="cross"/>
+          </div>
+        </div>
+        <div class="content-holder form-holder js-thanks-holder">
+          <div class="thanks-content">
+            <h2>Спасибо</h2>
+            <h4>менеджер сармат свяжется с вами после обработки запроса</h4><img class="cross js-close-form" src="img/icons/cross.svg" alt="cross"/>
+          </div>
         </div>
       </div>
       <div class="col">
@@ -788,11 +825,27 @@
   <section class="inner-section vip-buildings mobile-services">
     <div class="container section-container">
       <div class="col">
-        <div class="content-holder">
+        <div class="content-holder js-content-holder">
           <h1 class="hide-mobile">охрана <br/>vip<br/>заведений</h1>
           <h1 class="show-mobile">охрана <br/>vip заведений</h1>
           <p>Мы контролируем безопасность в заведении любого типа. Охраняем рестораны, клубы, загородные комплексы</p>
-          <button>Заказать услугу</button>
+          <button class="js-show-form"> Заказать услугу</button>
+        </div>
+        <div class="content-holder form-holder js-form-holder">
+          <div class="form-content">
+            <form>
+              <input type="text" placeholder="имя"/>
+              <input type="text" placeholder="email"/>
+              <input type="text" placeholder="номер телефона"/>
+            </form>
+            <button class="js-form-submit" type="submit">Заказать услугу</button><img class="cross js-close-form" src="img/icons/cross.svg" alt="cross"/>
+          </div>
+        </div>
+        <div class="content-holder form-holder js-thanks-holder">
+          <div class="thanks-content">
+            <h2>Спасибо</h2>
+            <h4>менеджер сармат свяжется с вами после обработки запроса</h4><img class="cross js-close-form" src="img/icons/cross.svg" alt="cross"/>
+          </div>
         </div>
       </div>
       <div class="col">
@@ -804,7 +857,6 @@
                 <p>Разрабатываем стратегию безопасности заведения, гостей и персонала;</p>
                 <p>Группа охраны контролирует безопасность визуальным наблюдением и техническими средствами –видеонаблюдение и досмотровое оборудование;</p>
                 <p class="hide-mobile">Работаем над профилактикой возникновения экстренных ситуаций и опасности;</p>
-                <p class="hide-mobile">Решаем конфликты внутри заведения.</p>
                 <h4 class="hide-mobile">Мы контролируем безопасность в заведении любого типа. Охраняем рестораны, клубы, загородные комплексы.</h4>
               </div>
               <div class="right-side">
@@ -814,6 +866,7 @@
             <div class="slide content-slide show-mobile">
               <div class="left-side">
                 <p>Работаем над профилактикой возникновения экстренных ситуаций и опасности;</p>
+                <p>Решаем конфликты внутри заведения.</p>
               </div>
               <div class="right-side">
                 <h2>как мы<br/>охраняем</h2>
@@ -849,11 +902,27 @@
   <section class="inner-section cyber-security mobile-services">
     <div class="container section-container">
       <div class="col">
-        <div class="content-holder">
+        <div class="content-holder js-content-holder">
           <h1 class="hide-mobile">кибер<br/>безопасность</h1>
           <h1 class="show-mobile">кибербезопасность</h1>
           <p>Мы защищаем информационное пространство бизнеса</p>
-          <button>Заказать услугу</button>
+          <button class="js-show-form">Заказать услугу</button>
+        </div>
+        <div class="content-holder form-holder js-form-holder">
+          <div class="form-content">
+            <form>
+              <input type="text" placeholder="имя"/>
+              <input type="text" placeholder="email"/>
+              <input type="text" placeholder="номер телефона"/>
+            </form>
+            <button class="js-form-submit" type="submit">Заказать услугу</button><img class="cross js-close-form" src="img/icons/cross.svg" alt="cross"/>
+          </div>
+        </div>
+        <div class="content-holder form-holder js-thanks-holder">
+          <div class="thanks-content">
+            <h2>Спасибо</h2>
+            <h4>менеджер сармат свяжется с вами после обработки запроса</h4><img class="cross js-close-form" src="img/icons/cross.svg" alt="cross"/>
+          </div>
         </div>
       </div>
       <div class="col">
