@@ -10,9 +10,9 @@ section.become-partner {
     .col:first-child {
       .content-holder,
       .form-holder {
-        max-width: 460px;
+        max-width: 361px;
         width: 100%;
-        margin-top: 255px;
+        margin-top: 205px;
         margin-left: 17.5%;
         @include mobile{
           max-width: 100%;
@@ -27,6 +27,7 @@ section.become-partner {
           }
         }
         h3 {
+          margin-top: 15px;
           @include mobile{
             margin-top: 10px;
             max-width: 225px;
@@ -40,11 +41,8 @@ section.become-partner {
         }
       }
       .form-holder {
-        height: 350px;
+        height: 400px;
         margin-top: 25px;
-        button {
-          margin-top: 30px;
-        }
         h2{
           margin-top: 0;
         }
@@ -63,6 +61,9 @@ section.become-partner {
         }
       }
       .thanks-content{
+        h2{
+          margin-top: 100px;
+        }
         @include mobile{
           margin-top: 120px
         }
