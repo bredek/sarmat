@@ -93,38 +93,38 @@
     //   }
     // },
 
-    // disableScroll: function() {
-    //   var plg = this;
-    //   if (window.addEventListener)
-    //     // older FF
-    //     window.addEventListener("DOMMouseScroll", plg.preventDefault, false);
-    //   window.onwheel = plg.preventDefault; // modern standard
-    //   window.onmousewheel = document.onmousewheel = plg.preventDefault; // older browsers, IE
-    //   window.ontouchmove = plg.preventDefault; // mobile
-    //   document.onkeydown = plg.preventDefaultForScrollKeys;
-    // },
+    disableScroll: function() {
+      var plg = this;
+      if (window.addEventListener)
+        // older FF
+        window.addEventListener("DOMMouseScroll", plg.preventDefault, false);
+      window.onwheel = plg.preventDefault; // modern standard
+      window.onmousewheel = document.onmousewheel = plg.preventDefault; // older browsers, IE
+      window.ontouchmove = plg.preventDefault; // mobile
+      document.onkeydown = plg.preventDefaultForScrollKeys;
+    },
 
-    // enableScroll: function() {
-    //   var plg = this;
-    //   if (window.removeEventListener)
-    //     window.removeEventListener("DOMMouseScroll", plg.preventDefault, false);
-    //   window.onmousewheel = document.onmousewheel = null;
-    //   window.onwheel = null;
-    //   window.ontouchmove = null;
-    //   document.onkeydown = null;
-    // },
+    enableScroll: function() {
+      var plg = this;
+      if (window.removeEventListener)
+        window.removeEventListener("DOMMouseScroll", plg.preventDefault, false);
+      window.onmousewheel = document.onmousewheel = null;
+      window.onwheel = null;
+      window.ontouchmove = null;
+      document.onkeydown = null;
+    },
 
-    // fixBody: function() {
-    //   $("html")
-    //     .add("body")
-    //     .addClass("fixBody");
-    // },
+    fixBody: function() {
+      $("html")
+        .add("body")
+        .addClass("fixBody");
+    },
 
-    // unfixBody: function() {
-    //   $("html")
-    //     .add("body")
-    //     .removeClass("fixBody");
-    // },
+    unfixBody: function() {
+      $("html")
+        .add("body")
+        .removeClass("fixBody");
+    },
 
     checkMedia: function(resolution) {
       return window.matchMedia(resolution).matches;
@@ -373,9 +373,11 @@
         contentHolder = $(".js-content-holder"),
         thanksHolder = $(".js-thanks-holder"),
         closeBtn = $(".js-close-form");
-      submitBtn = $(".js-form-submit");
+      submitBtn = $(".js-form-submit"),
+      _this = this;
 
       showBtn.on("click", function(e) {
+        _this.fixBody();
         formHolder.show();
         contentHolder.hide();
       });
@@ -384,6 +386,7 @@
         formHolder.hide();
       });
       closeBtn.on("click", function(e) {
+        _this.unfixBody();
         formHolder.hide();
         thanksHolder.hide();
         contentHolder.show();

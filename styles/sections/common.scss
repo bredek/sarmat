@@ -51,7 +51,7 @@ section.inner-section{
     box-sizing: border-box;
     text-align: center;
     @include mobile{
-      position: absolute;
+      position: fixed;
       top: 0;
       left: 0;
       width: 100%;
@@ -63,6 +63,9 @@ section.inner-section{
           margin-top: 65px;
         }
       }
+    }
+    @include tablet{
+      position: absolute;
     }
     form {
       input {
@@ -381,4 +384,8 @@ section.inner-section{
       }
     }
   }
+}
+
+.fixBody {
+  overflow: hidden;
 }

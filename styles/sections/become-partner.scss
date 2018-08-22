@@ -58,6 +58,9 @@ section.become-partner {
         @include desktop{
           height: 350px;
         }
+        @include mobile{
+          margin-top: 0;
+        }
         h2{
           margin-top: 0;
         }
