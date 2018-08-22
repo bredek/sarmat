@@ -512,9 +512,9 @@
             $(".map .footer").addClass("animated fadeInUp");
           }
         }, // This option accepts a callback function. The function will be called after the page moves.
-        loop: false // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
+        loop: false, // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
         // keyboard: true,                  // You can activate the keyboard controls
-        // responsiveFallback: false,        // You can fallback to normal page scroll by defining the width of the browser in which
+        responsiveFallback: 600,        // You can fallback to normal page scroll by defining the width of the browser in which
         //                                  // you want the responsive fallback to be triggered. For example, set this to 600 and whenever
         //                                  // the browser's width is less than 600, the fallback will kick in.
         // direction: "vertical"            // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".
@@ -552,35 +552,6 @@
   bredek.init = function(options) {
     var self = this;
     self.initAllPlugins();
-
-    function touchstart(event) {
-      $this.unbind("touchmove", touchmove);
-      var touches = event.originalEvent.touches;
-      var touchedObject = touches[0].target;
-      if (
-        touchedObject.nodeName == "A" ||
-        touchedObject.nodeName == "LABEL" ||
-        touchedObject.nodeName == "SPAN"
-      ) {
-        $(touchedObject).click();
-        return 1;
-      }
-      if (
-        !(
-          (typeof $._data(touchedObject, "events") !== "undefined" &&
-            $._data(touchedObject, "events").click != null) ||
-          touchedObject.nodeName == "A" ||
-          touchedObject.nodeName == "LABEL" ||
-          touchedObject.nodeName == "SPAN"
-        )
-      ) {
-        startX = touches[0].pageX;
-        startY = touches[0].pageY;
-        $this.bind("touchmove", touchmove);
-      }
-      event.preventDefault();
-    }
-
   };
 
   bredek.init.prototype = bredek.prototype;
@@ -594,58 +565,58 @@ $(document).ready(function() {
 });
 
 
-(function($) { 
-  $.fn.swipeEvents = function() {
-    return this.each(function() {
+// (function($) { 
+//   $.fn.swipeEvents = function() {
+//     return this.each(function() {
       
-      var startX,
-          startY,
-          $this = $(this);
+//       var startX,
+//           startY,
+//           $this = $(this);
       
-      $this.bind('touchstart', touchstart);
+//       $this.bind('touchstart', touchstart);
       
-      function touchstart(event) {
-        var touches = event.originalEvent.touches;
-        if (touches && touches.length) {
-          startX = touches[0].pageX;
-          startY = touches[0].pageY;
-          $this.bind('touchmove', touchmove);
-          $this.bind('touchend', touchend);
-        }
-        event.preventDefault();
-      }
+//       function touchstart(event) {
+//         var touches = event.originalEvent.touches;
+//         if (touches && touches.length) {
+//           startX = touches[0].pageX;
+//           startY = touches[0].pageY;
+//           $this.bind('touchmove', touchmove);
+//           $this.bind('touchend', touchend);
+//         }
+//         event.preventDefault();
+//       }
       
-      function touchmove(event) {
-        var touches = event.originalEvent.touches;
-        if (touches && touches.length) {
-          var deltaX = startX - touches[0].pageX;
-          var deltaY = startY - touches[0].pageY;
+//       function touchmove(event) {
+//         var touches = event.originalEvent.touches;
+//         if (touches && touches.length) {
+//           var deltaX = startX - touches[0].pageX;
+//           var deltaY = startY - touches[0].pageY;
           
-          if (deltaX >= 50) {
-            $this.trigger("swipeLeft");
-          }
-          if (deltaX <= -50) {
-            $this.trigger("swipeRight");
-          }
-          if (deltaY >= 50) {
-            $this.trigger("swipeUp");
-          }
-          if (deltaY <= -50) {
-            $this.trigger("swipeDown");
-          }
-          if (Math.abs(deltaX) >= 50 || Math.abs(deltaY) >= 50) {
-            $this.unbind('touchmove', touchmove);
-            $this.unbind('touchend', touchend);
-          }
-        }
-        event.preventDefault();
-      }
+//           if (deltaX >= 50) {
+//             $this.trigger("swipeLeft");
+//           }
+//           if (deltaX <= -50) {
+//             $this.trigger("swipeRight");
+//           }
+//           if (deltaY >= 50) {
+//             $this.trigger("swipeUp");
+//           }
+//           if (deltaY <= -50) {
+//             $this.trigger("swipeDown");
+//           }
+//           if (Math.abs(deltaX) >= 50 || Math.abs(deltaY) >= 50) {
+//             $this.unbind('touchmove', touchmove);
+//             $this.unbind('touchend', touchend);
+//           }
+//         }
+//         event.preventDefault();
+//       }
       
-      function touchend(event) {
-        $this.unbind('touchmove', touchmove);
-        event.preventDefault();
-      }
+//       function touchend(event) {
+//         $this.unbind('touchmove', touchmove);
+//         event.preventDefault();
+//       }
       
-    });
-  };
-})(jQuery);
+//     });
+//   };
+// })(jQuery);
