@@ -477,7 +477,7 @@
         // easing: "ease",                  // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in",
         //                                  // "ease-out", "ease-in-out", or even cubic bezier value such as "cubic-bezier(0.175, 0.885, 0.420, 1.310)"
         animationTime: _this.checkMedia("(min-width: 1024px)") ? 1000 : 1500, // AnimationTime let you define how long each section takes to animate
-        pagination: false,                // You can either show or hide the pagination. Toggle true for show, false for hide.
+        pagination: false, // You can either show or hide the pagination. Toggle true for show, false for hide.
         // updateURL: false,                // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
         // beforeMove: function(index) {},  // This option accepts a callback function. The function will be called before the page moves.
         afterMove: function(index) {
@@ -499,18 +499,17 @@
             $(".service.service-active")
               .find(".slider-holder")
               .addClass("animated fadeInRight");
-            $(".inner-sub-menu")
-              .addClass("animated fadeInUp");
+            $(".inner-sub-menu").addClass("animated fadeInUp");
           } else if (index === 4 && _this.checkMedia("(min-width: 1024px)")) {
             $(".become-partner")
               .find(".content-holder")
               .add(".form-holder")
               .addClass("animated fadeInLeft");
           } else if (index === 5 && _this.checkMedia("(min-width: 1024px)")) {
-            $(".map .section-container .content-holder")
-              .addClass("animated fadeInLeft");
-            $(".map .footer")
-              .addClass("animated fadeInUp");
+            $(".map .section-container .content-holder").addClass(
+              "animated fadeInLeft"
+            );
+            $(".map .footer").addClass("animated fadeInUp");
           }
         }, // This option accepts a callback function. The function will be called after the page moves.
         loop: false // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
@@ -553,6 +552,35 @@
   bredek.init = function(options) {
     var self = this;
     self.initAllPlugins();
+
+    function touchstart(event) {
+      $this.unbind("touchmove", touchmove);
+      var touches = event.originalEvent.touches;
+      var touchedObject = touches[0].target;
+      if (
+        touchedObject.nodeName == "A" ||
+        touchedObject.nodeName == "LABEL" ||
+        touchedObject.nodeName == "SPAN"
+      ) {
+        $(touchedObject).click();
+        return 1;
+      }
+      if (
+        !(
+          (typeof $._data(touchedObject, "events") !== "undefined" &&
+            $._data(touchedObject, "events").click != null) ||
+          touchedObject.nodeName == "A" ||
+          touchedObject.nodeName == "LABEL" ||
+          touchedObject.nodeName == "SPAN"
+        )
+      ) {
+        startX = touches[0].pageX;
+        startY = touches[0].pageY;
+        $this.bind("touchmove", touchmove);
+      }
+      event.preventDefault();
+    }
+
   };
 
   bredek.init.prototype = bredek.prototype;
@@ -561,7 +589,63 @@
 
 $(document).ready(function() {
   var plg = BREDEK();
-
   // document.addEventListener("DOMContentLoaded", plg.preloader(), false);
   // plg.initPins();
 });
+
+
+(function($) { 
+  $.fn.swipeEvents = function() {
+    return this.each(function() {
+      
+      var startX,
+          startY,
+          $this = $(this);
+      
+      $this.bind('touchstart', touchstart);
+      
+      function touchstart(event) {
+        var touches = event.originalEvent.touches;
+        if (touches && touches.length) {
+          startX = touches[0].pageX;
+          startY = touches[0].pageY;
+          $this.bind('touchmove', touchmove);
+          $this.bind('touchend', touchend);
+        }
+        event.preventDefault();
+      }
+      
+      function touchmove(event) {
+        var touches = event.originalEvent.touches;
+        if (touches && touches.length) {
+          var deltaX = startX - touches[0].pageX;
+          var deltaY = startY - touches[0].pageY;
+          
+          if (deltaX >= 50) {
+            $this.trigger("swipeLeft");
+          }
+          if (deltaX <= -50) {
+            $this.trigger("swipeRight");
+          }
+          if (deltaY >= 50) {
+            $this.trigger("swipeUp");
+          }
+          if (deltaY <= -50) {
+            $this.trigger("swipeDown");
+          }
+          if (Math.abs(deltaX) >= 50 || Math.abs(deltaY) >= 50) {
+            $this.unbind('touchmove', touchmove);
+            $this.unbind('touchend', touchend);
+          }
+        }
+        event.preventDefault();
+      }
+      
+      function touchend(event) {
+        $this.unbind('touchmove', touchmove);
+        event.preventDefault();
+      }
+      
+    });
+  };
+})(jQuery);

@@ -104,6 +104,9 @@ section.inner-section{
       line-height: 49px;
       letter-spacing: 0;
       text-transform: uppercase;
+      @include mobile{
+        line-height: 30px;
+      }
     }
     .cross {
       position: absolute;
@@ -306,8 +309,8 @@ section.inner-section{
       }
     }
     .slick-arrow {
-      width: 0;
-      height: 0;
+      width: 30px;
+      height: 30px;
       position: absolute;
       bottom: 55%;
       z-index: 2;
@@ -323,7 +326,8 @@ section.inner-section{
       &.slick-next {
         right: -12.5%;
         @include mobile{
-          right: 40%;
+          right: 35%;
+          bottom: -12.5%;
         }
         &:after {
           border-color: transparent transparent transparent white;
@@ -333,7 +337,8 @@ section.inner-section{
       &.slick-prev {
         left: -15%;
         @include mobile{
-          left: 40%;
+          left: 35%;
+          bottom: -12.5%;
         }
         &:after {
           border-color: transparent white transparent transparent;
