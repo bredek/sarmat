@@ -12,6 +12,11 @@ body {
   }
 }
 
+body,
+html {
+  position: fixed;
+}
+
 section {
   .inner-sub-menu {
     width: 77.5%;
