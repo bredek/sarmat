@@ -1,322 +1,415 @@
 @import "modules/vars.scss";
 @import "modules/mixins.scss";
 body {
-  font-family: "Roboto", Arial, sans-serif;
-  font-size: 12px;
-  color: #ffffff;
-  letter-spacing: 1.5px;
-  @include mobile {
-    font-size: 10px;
-    line-height: 11px;
-    letter-spacing: 0;
-    -webkit-overflow-scrolling: touch;
-  }
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: 12px;
+    color: #ffffff;
+    letter-spacing: 1.5px;
+    @include mobile {
+        font-size: 10px;
+        line-height: 11px;
+        letter-spacing: 0;
+        -webkit-overflow-scrolling: touch;
+    }
 }
 
 body,
 html {
-  position: fixed;
+    position: fixed;
 }
 
 section {
-  .inner-sub-menu {
-    width: 77.5%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: absolute;
-    bottom: 0;
-    left: 17.5%;
-    opacity: 0;
-    @include mobile {
-      display: none;
-    }
-    li {
-      width: 20%;
-      height: 165px;
-      padding: 30px;
-      box-sizing: content-box;
-      background: $dark-grey;
-      cursor: pointer;
-      transition: .3s ease;
-      @include desktop {
-        height: 45px;
+    .inner-sub-menu {
+        width: 77.5%;
         display: flex;
-        padding: 30px 25px;
-        border-right: 1px solid black;
-        &:last-child{
-          border-right: none;
+        justify-content: space-between;
+        align-items: center;
+        position: absolute;
+        bottom: 0;
+        left: 17.5%;
+        opacity: 0;
+        @include mobile {
+            display: none;
         }
-      }
-      &.active {
-        background: black;
-        &:hover{
-          background: black;
+        li {
+            width: 20%;
+            height: 165px;
+            padding: 30px;
+            box-sizing: content-box;
+            background: $dark-grey;
+            cursor: pointer;
+            transition: .3s ease;
+            @include desktop {
+                height: 45px;
+                display: flex;
+                padding: 30px 25px;
+                border-right: 1px solid black;
+                &:last-child {
+                    border-right: none;
+                }
+            }
+            &.active {
+                background: black;
+                &:hover {
+                    background: black;
+                }
+            }
+            &:hover {
+                background: $main-grey;
+            }
+            h4 {
+                margin-top: 28px;
+                @include desktop {
+                    font-size: 8px;
+                    margin-top: 0;
+                    margin-left: 10px;
+                }
+            }
+            p {
+                margin-top: 18px;
+                font-size: 9px;
+                line-height: 10px;
+                color: #ffffff;
+                letter-spacing: 0;
+                @include desktop {
+                    display: none;
+                }
+            }
+            .icon-holder {
+                width: 55px;
+                height: 50px;
+            }
+            &:first-child {
+                .icon-holder {
+                    background: url(../img/icons/security.svg) 50% 50% no-repeat;
+                }
+                &.active {
+                    .icon-holder {
+                        background: url(../img/icons/security-active.svg) 50% 50% no-repeat;
+                    }
+                }
+            }
+            &:nth-child(2) {
+                .icon-holder {
+                    width: 74px;
+                    background: url(../img/icons/transport.svg) 50% 50% no-repeat;
+                }
+                &.active {
+                    .icon-holder {
+                        background: url(../img/icons/transport-active.svg) 50% 50% no-repeat;
+                    }
+                }
+            }
+            &:nth-child(3) {
+                .icon-holder {
+                    background: url(../img/icons/vip-estate.svg) 50% 50% no-repeat;
+                }
+                &.active {
+                    .icon-holder {
+                        background: url(../img/icons/vip-estate-active.svg) 50% 50% no-repeat;
+                    }
+                }
+            }
+            &:nth-child(4) {
+                .icon-holder {
+                    background: url(../img/icons/vip-buildings.svg) 50% 50% no-repeat;
+                }
+                &.active {
+                    .icon-holder {
+                        background: url(../img/icons/vip-buildings-active.svg) 50% 50% no-repeat;
+                    }
+                }
+            }
+            &:nth-child(5) {
+                .icon-holder {
+                    background: url(../img/icons/cyber-security.svg) 50% 50% no-repeat;
+                }
+                &.active {
+                    .icon-holder {
+                        background: url(../img/icons/cyber-security-active.svg) 50% 50% no-repeat;
+                    }
+                }
+            }
         }
-      }
-      &:hover{
-        background: $main-grey;
-      }
-      h4 {
-        margin-top: 28px;
-        @include desktop {
-          font-size: 8px;
-          margin-top: 0;
-          margin-left: 10px;
-        }
-      }
-      p {
-        margin-top: 18px;
-        font-size: 9px;
-        line-height: 10px;
-        color: #ffffff;
-        letter-spacing: 0;
-        @include desktop {
-          display: none;
-        }
-      }
-      .icon-holder{
-        width: 55px;
-        height: 50px;
-      }
-      &:first-child{
-        .icon-holder{
-          background: url(../img/icons/security.svg) 50% 50% no-repeat;
-        }
-        &.active{
-          .icon-holder{
-            background: url(../img/icons/security-active.svg) 50% 50% no-repeat;
-          }
-        }
-      }
-      &:nth-child(2){
-        .icon-holder{
-          width: 74px;
-          background: url(../img/icons/transport.svg) 50% 50% no-repeat;
-        }
-        &.active{
-          .icon-holder{
-            background: url(../img/icons/transport-active.svg) 50% 50% no-repeat;
-          }
-        }
-      }
-      &:nth-child(3){
-        .icon-holder{
-          background: url(../img/icons/vip-estate.svg) 50% 50% no-repeat;
-        }
-        &.active{
-          .icon-holder{
-            background: url(../img/icons/vip-estate-active.svg) 50% 50% no-repeat;
-          }
-        }
-      }
-      &:nth-child(4){
-        .icon-holder{
-          background: url(../img/icons/vip-buildings.svg) 50% 50% no-repeat;
-        }
-        &.active{
-          .icon-holder{
-            background: url(../img/icons/vip-buildings-active.svg) 50% 50% no-repeat;
-          }
-        }
-      }
-      &:nth-child(5){
-        .icon-holder{
-          background: url(../img/icons/cyber-security.svg) 50% 50% no-repeat;
-        }
-        &.active{
-          .icon-holder{
-            background: url(../img/icons/cyber-security-active.svg) 50% 50% no-repeat;
-          }
-        }
-      }
     }
-  }
 }
 
 .container {
-  width: 75%;
-  margin: 0 auto;
-  @include mobile {
-    width: 100%;
-    padding: 0 20px;
-    box-sizing: border-box;
-  }
-  &.section-container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    &.service {
-      display: none;
-      &-active {
+    width: 75%;
+    margin: 0 auto;
+    @include mobile {
+        width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+    &.section-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
         display: flex;
-      }
-      .content-holder,
-      .slider-holder{
-        opacity: 0;
-        @include mobile{
-          opacity: 1;
+        justify-content: space-between;
+        &.service {
+            display: none;
+            &-active {
+                display: flex;
+            }
+            .content-holder,
+            .slider-holder {
+                opacity: 0;
+                @include mobile {
+                    opacity: 1;
+                }
+            }
         }
-      }
+        .col {
+            width: 50%;
+            p {
+                max-width: 315px;
+                margin-top: 20px;
+                font-size: 13px;
+                line-height: 15px;
+                color: #ffffff;
+                letter-spacing: 0;
+            }
+            button {
+                margin-top: 20px;
+            }
+            &:first-child {
+                background-color: $main-grey;
+                .content-holder {
+                    margin-left: 35%;
+                    @include mobile {
+                        margin-left: 0;
+                    }
+                }
+                @include mobile {
+                    background-color: transparent;
+                    h1 {
+                        margin-top: 20px;
+                    }
+                }
+                @include tablet {
+                    h1 {
+                        max-width: 180px;
+                    }
+                }
+            }
+            &:last-child {
+                background-color: $light-grey;
+                @include mobile {
+                    background-color: transparent;
+                }
+            }
+        }
     }
-    .col {
-      width: 50%;
-      p {
-        max-width: 315px;
-        margin-top: 20px;
-        font-size: 13px;
-        line-height: 15px;
-        color: #ffffff;
-        letter-spacing: 0;
-      }
-      button {
-        margin-top: 20px;
-      }
-      &:first-child {
-        background-color: $main-grey;
-        .content-holder {
-          margin-left: 35%;
-          @include mobile {
-            margin-left: 0;
-          }
-        }
-        @include mobile {
-          background-color: transparent;
-          h1 {
-            margin-top: 20px;
-          }
-        }
-        @include tablet {
-          h1 {
-            max-width: 180px;
-          }
-        }
-      }
-      &:last-child {
-        background-color: $light-grey;
-        @include mobile {
-          background-color: transparent;
-        }
-      }
-    }
-  }
 }
 
 h1 {
-  font-family: "HeadingCompressedPro", Arial, sans-serif;
-  font-weight: 700;
-  font-size: 64px;
-  line-height: 74px;
-  letter-spacing: 0;
-  text-transform: uppercase;
-  @include mobile {
-    font-size: 36px;
-    line-height: 45px;
-  }
+    font-family: "HeadingCompressedPro", Arial, sans-serif;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 74px;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    @include mobile {
+        font-size: 36px;
+        line-height: 45px;
+    }
 }
 
 h2 {
-  font-family: "HeadingCompressedPro", Arial, sans-serif;
-  font-size: 30px;
-  color: #ffffff;
-  line-height: 45px;
-  letter-spacing: 0;
-  text-transform: uppercase;
-  @include mobile {
-    font-size: 24px;
-    line-height: 30px;
-  }
+    font-family: "HeadingCompressedPro", Arial, sans-serif;
+    font-size: 30px;
+    color: #ffffff;
+    line-height: 45px;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    @include mobile {
+        font-size: 24px;
+        line-height: 30px;
+    }
 }
 
 h3 {
-  font-size: 14px;
-  font-weight: 500;
-  color: #ffffff;
-  letter-spacing: 1.75px;
-  line-height: 16px;
-  text-transform: uppercase;
-  @include mobile {
-    font-size: 11px;
-    letter-spacing: 1.38px;
-    line-height: 13px;
-  }
+    font-size: 14px;
+    font-weight: 500;
+    color: #ffffff;
+    letter-spacing: 1.75px;
+    line-height: 16px;
+    text-transform: uppercase;
+    @include mobile {
+        font-size: 11px;
+        letter-spacing: 1.38px;
+        line-height: 13px;
+    }
 }
 
 h4 {
-  font-size: 12px;
-  font-weight: 500;
-  color: #ffffff;
-  line-height: 14px;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 500;
+    color: #ffffff;
+    line-height: 14px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
 }
 
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 button,
 .btn {
-  width: 220px;
-  height: 46px;
-  background: $blue;
-  border-radius: 10px;
-  outline: none;
-  border: none;
-  font-size: 12px;
-  color: #ffffff;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  text-align: center;
-  @include mobile {
-    width: 170px;
-    height: 36px;
-    font-size: 11px;
-    letter-spacing: 0.46px;
+    width: 220px;
+    height: 46px;
+    background: $blue;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    font-size: 12px;
+    color: #ffffff;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
     text-align: center;
-  }
+    @include mobile {
+        width: 170px;
+        height: 36px;
+        font-size: 11px;
+        letter-spacing: 0.46px;
+        text-align: center;
+        justify-content: center;
+    }
 }
 
 img {
-  max-width: 100%;
+    max-width: 100%;
 }
 
 .show-mobile {
-  display: none !important;
+    display: none;
 }
 
 @include mobile {
-  .show-mobile {
-    display: flex !important; 
-  }
-  .hide-mobile {
-    display: none !important;
-  }
+    .show-mobile {
+        display: flex;
+    }
+    .hide-mobile {
+        display: none;
+    }
 }
 
 #map {
-  height: 100%;
-  width: 100%;
-  position: absolute !important;
-  z-index: 0;
-  top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute !important;
+    z-index: 0;
+    top: 0;
 }
 
 input[type='text']:focus,
 input[type='number']:focus,
 textarea:focus {
-	font-size: 16px;
+    font-size: 16px;
 }
 
 /* disable auto-zoom on iphone input field focus */
-@media screen and (-webkit-min-device-pixel-ratio:0) {
 
-	select:focus,
-	textarea:focus,
-	input:focus {
-		font-size: 16px;
-	}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    select:focus,
+    textarea:focus,
+    input:focus {
+        font-size: 16px;
+    }
+}
+
+.form-holder {
+    position: relative;
+    display: none;
+    height: 400px;
+    background: black;
+    padding: 30px;
+    box-sizing: border-box;
+    text-align: center;
+    &.mobile.show-mobile {
+      display:none;
+    }
+    @include mobile {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 3;
+        form {
+            margin-top: 150px;
+            button {
+                margin-top: 65px;
+            }
+        }
+    }
+    @include tablet {
+        position: absolute;
+    }
+    form {
+        input {
+            margin-top: 16px;
+            width: 100%;
+            height: 43px;
+            background: $main-grey;
+            border-radius: 10px;
+            outline: none;
+            border: none;
+            color: $light-grey;
+            text-align: center;
+            font-size: 12px;
+            color: #ffffff;
+            letter-spacing: 1.5px;
+            line-height: 14px;
+            font-weight: 500;
+            text-transform: uppercase;
+            &:first-child {
+                margin-top: 0;
+            }
+            &::placeholder {
+                color: $light-grey;
+            }
+        }
+    }
+    img {
+        cursor: pointer;
+    }
+    button {
+        width: 100%;
+        margin-top: 75px;
+        border: none;
+        outline: none;
+        background: none;
+        font-family: "HeadingCompressedPro", Arial, sans-serif;
+        font-size: 40px;
+        color: #ffffff;
+        line-height: 49px;
+        letter-spacing: 0;
+        text-transform: uppercase;
+        @include mobile {
+            line-height: 30px;
+        }
+    }
+    .cross {
+        position: absolute;
+        bottom: 45px;
+        left: calc(50% - 7.5px);
+    }
+    .thanks-content {
+        h2 {
+            margin-top: 100px;
+            @include mobile {
+                font-size: 42px;
+                margin-bottom: 20px;
+            }
+        }
+        h4 {
+            margin: 10px auto 0;
+            max-width: 145px;
+        }
+    }
 }
