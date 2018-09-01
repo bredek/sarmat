@@ -370,21 +370,46 @@
     initShowOrderForm: function() {
       var showBtn = $(".js-show-form"),
         formHolder = $(".js-form-holder"),
+        form = $(".js-form-holder form"),
         contentHolder = $(".js-content-holder"),
         thanksHolder = $(".js-thanks-holder"),
         closeBtn = $(".js-close-form");
-      submitBtn = $(".js-form-submit"),
-      _this = this;
+      (submitBtn = $(".js-form-submit")), (_this = this);
 
       showBtn.on("click", function(e) {
         _this.fixBody();
         formHolder.show();
         contentHolder.hide();
       });
-      submitBtn.on("click", function(e) {
+
+      form.submit(function(e) {
+        var inputs = [];
+        e.preventDefault();
+        $(e.target)
+          .find("input")
+          .each(function(index, item) {
+            inputs.push(item.value);
+          });
+
+        var templateParams = {
+          email: inputs[0],
+          name: inputs[1],
+          phone: inputs[2]
+        };
+
+        emailjs.send("gmail", "template_FeSMoiTc", templateParams).then(
+          function(response) {
+            console.log("SUCCESS!", response.status, response.text);
+          },
+          function(error) {
+            console.log("FAILED...", error);
+          }
+        );
+
         thanksHolder.show();
         formHolder.hide();
       });
+
       closeBtn.on("click", function(e) {
         _this.unfixBody();
         formHolder.hide();
@@ -396,19 +421,48 @@
     initShowContactForm: function() {
       var showBtn = $("#js-show-contact-form"),
         formHolder = $("#js-contact-form-holder"),
+        form = $("#js-contact-form-holder form"),
         tip = $(".js-contact-form-tip "),
         thanksHolder = $("#js-thanks-contact-holder"),
-        closeBtn = $("#js-close-contact-form");
+        closeBtn = $(".js-close-contact-form");
       submitBtn = $("#js-contact-form-submit");
 
       showBtn.on("click", function(e) {
         formHolder.show();
         tip.hide();
       });
-      submitBtn.on("click", function(e) {
+      
+      form.submit(function(e) {
+        var inputs = [];
+        e.preventDefault();
+        $(e.target)
+          .find("input")
+          .each(function(index, item) {
+            inputs.push(item.value);
+          });
+
+        var templateParams = {
+          email: inputs[0],
+          name: inputs[1],
+          phone: inputs[2]
+        };
+
+        emailjs.send("gmail", "template_FeSMoiTc", templateParams).then(
+          function(response) {
+            console.log("SUCCESS!", response.status, response.text);
+          },
+          function(error) {
+            console.log("FAILED...", error);
+          }
+        );
+
         thanksHolder.show();
         formHolder.hide();
       });
+      // submitBtn.on("click", function(e) {
+      //   thanksHolder.show();
+      //   formHolder.hide();
+      // });
       closeBtn.on("click", function(e) {
         formHolder.hide();
         thanksHolder.hide();
@@ -517,7 +571,7 @@
         }, // This option accepts a callback function. The function will be called after the page moves.
         loop: false, // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
         // keyboard: true,                  // You can activate the keyboard controls
-        responsiveFallback: 600,        // You can fallback to normal page scroll by defining the width of the browser in which
+        responsiveFallback: 600 // You can fallback to normal page scroll by defining the width of the browser in which
         //                                  // you want the responsive fallback to be triggered. For example, set this to 600 and whenever
         //                                  // the browser's width is less than 600, the fallback will kick in.
         // direction: "vertical"            // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".
@@ -546,9 +600,10 @@
       this.initShowMobileMenu();
       this.initMenuAnimations();
       this.initShowSubMenu();
+      this.initScroller();
+      emailjs.init("user_vpTJtdbrvPQy4LMPhsP27")
       this.initShowOrderForm();
       this.initShowContactForm();
-      this.initScroller();
     }
   };
 
@@ -567,17 +622,16 @@ $(document).ready(function() {
   // plg.initPins();
 });
 
-
-// (function($) { 
+// (function($) {
 //   $.fn.swipeEvents = function() {
 //     return this.each(function() {
-      
+
 //       var startX,
 //           startY,
 //           $this = $(this);
-      
+
 //       $this.bind('touchstart', touchstart);
-      
+
 //       function touchstart(event) {
 //         var touches = event.originalEvent.touches;
 //         if (touches && touches.length) {
@@ -588,13 +642,13 @@ $(document).ready(function() {
 //         }
 //         event.preventDefault();
 //       }
-      
+
 //       function touchmove(event) {
 //         var touches = event.originalEvent.touches;
 //         if (touches && touches.length) {
 //           var deltaX = startX - touches[0].pageX;
 //           var deltaY = startY - touches[0].pageY;
-          
+
 //           if (deltaX >= 50) {
 //             $this.trigger("swipeLeft");
 //           }
@@ -614,12 +668,12 @@ $(document).ready(function() {
 //         }
 //         event.preventDefault();
 //       }
-      
+
 //       function touchend(event) {
 //         $this.unbind('touchmove', touchmove);
 //         event.preventDefault();
 //       }
-      
+
 //     });
 //   };
 // })(jQuery);

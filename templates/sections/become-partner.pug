@@ -5,13 +5,13 @@ section.become-partner
                 h1 стать партнером
                 h3.js-contact-form-tip становись партнером охранной системы сармат и получай интересные, выгодные предложения от сотрудничества с нами
                 button#js-show-contact-form.js-contact-form-tip.hide-mobile Заказать услугу
-                button.js-show-form.show-mobile Заказать услугу
+                button.js-show-form.show-mobile Связаться
             .form-holder#js-contact-form-holder
                 .form-content
                     form
                         input(type="text" placeholder="имя" required)
-                        input(type="text" placeholder="email" required)
-                        input(type="text" placeholder="номер телефона" required)
+                        input(type="email" placeholder="email" required)
+                        input(type="tel" placeholder="050-111-1111" required)
                         button(type="submit")#js-contact-form-submit Связаться
                     img.cross.js-close-contact-form(src="img/icons/cross.svg", alt="cross")
             .form-holder#js-thanks-contact-holder
