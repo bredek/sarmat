@@ -6,19 +6,7 @@ section.inner-section.vip-buildings.mobile-services
                 h1.show-mobile охрана <br/>vip заведений
                 p Мы контролируем безопасность в заведении любого типа. Охраняем рестораны, клубы, загородные комплексы
                 button.js-show-form  Заказать услугу
-            .content-holder.form-holder.js-form-holder
-                .form-content
-                    form
-                        input(type="text" placeholder="имя")
-                        input(type="text" placeholder="email")
-                        input(type="text" placeholder="номер телефона")
-                    button(type="submit").js-form-submit Заказать услугу
-                    img.cross.js-close-form(src="img/icons/cross.svg", alt="cross")
-            .content-holder.form-holder.js-thanks-holder
-                .thanks-content
-                    h2 Спасибо
-                    h4 менеджер сармат свяжется с вами после обработки запроса
-                    img.cross.js-close-form(src="img/icons/cross.svg", alt="cross")
+            include ./form
         .col
             .slider-holder
                 .section-slider#js-vip-buildings-slider
